@@ -86,7 +86,7 @@ class FFAppState extends ChangeNotifier {
     _secondsInputToMIlliSeconds = value;
   }
 
-  int _totalMilliseconds = 0;
+  int _totalMilliseconds = 60000;
   int get totalMilliseconds => _totalMilliseconds;
   set totalMilliseconds(int value) {
     _totalMilliseconds = value;
