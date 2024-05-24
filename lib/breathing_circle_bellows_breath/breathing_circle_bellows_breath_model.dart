@@ -1,12 +1,12 @@
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import 'breathing_circle_resonant_widget.dart'
-    show BreathingCircleResonantWidget;
+import 'breathing_circle_bellows_breath_widget.dart'
+    show BreathingCircleBellowsBreathWidget;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 
-class BreathingCircleResonantModel
-    extends FlutterFlowModel<BreathingCircleResonantWidget> {
+class BreathingCircleBellowsBreathModel
+    extends FlutterFlowModel<BreathingCircleBellowsBreathWidget> {
   ///  Local state fields for this page.
 
   int inhaleSeconds = 4;

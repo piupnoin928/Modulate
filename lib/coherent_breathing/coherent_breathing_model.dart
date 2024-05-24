@@ -11,53 +11,17 @@ class CoherentBreathingModel extends FlutterFlowModel<CoherentBreathingWidget> {
   FocusNode? hourFocusNode;
   TextEditingController? hourTextController;
   String? Function(BuildContext, String?)? hourTextControllerValidator;
-  String? _hourTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
-
   // State field(s) for Minutes widget.
   FocusNode? minutesFocusNode;
   TextEditingController? minutesTextController;
   String? Function(BuildContext, String?)? minutesTextControllerValidator;
-  String? _minutesTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
-
   // State field(s) for Seconds widget.
   FocusNode? secondsFocusNode;
   TextEditingController? secondsTextController;
   String? Function(BuildContext, String?)? secondsTextControllerValidator;
-  String? _secondsTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
 
   @override
-  void initState(BuildContext context) {
-    hourTextControllerValidator = _hourTextControllerValidator;
-    minutesTextControllerValidator = _minutesTextControllerValidator;
-    secondsTextControllerValidator = _secondsTextControllerValidator;
-  }
+  void initState(BuildContext context) {}
 
   @override
   void dispose() {

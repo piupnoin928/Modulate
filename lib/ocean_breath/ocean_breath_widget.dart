@@ -8,26 +8,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'resonant_breathing_model.dart';
-export 'resonant_breathing_model.dart';
+import 'ocean_breath_model.dart';
+export 'ocean_breath_model.dart';
 
-class ResonantBreathingWidget extends StatefulWidget {
-  const ResonantBreathingWidget({super.key});
+class OceanBreathWidget extends StatefulWidget {
+  const OceanBreathWidget({super.key});
 
   @override
-  State<ResonantBreathingWidget> createState() =>
-      _ResonantBreathingWidgetState();
+  State<OceanBreathWidget> createState() => _OceanBreathWidgetState();
 }
 
-class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
-  late ResonantBreathingModel _model;
+class _OceanBreathWidgetState extends State<OceanBreathWidget> {
+  late OceanBreathModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => ResonantBreathingModel());
+    _model = createModel(context, () => OceanBreathModel());
 
     _model.hourTextController ??= TextEditingController();
     _model.hourFocusNode ??= FocusNode();
@@ -69,11 +68,11 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('List');
             },
           ),
           title: Text(
-            'Coherent Breathing',
+            'Ocean Breath',
             style: FlutterFlowTheme.of(context).bodyLarge.override(
                   fontFamily: 'Jost',
                   color: const Color(0xFF3BE8B0),
@@ -97,8 +96,8 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(0.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/669/600',
+                        child: Image.asset(
+                          'assets/images/pexels-miaversa-53441205-11409226.jpg',
                           width: double.infinity,
                           height: 200.0,
                           fit: BoxFit.cover,
@@ -129,7 +128,7 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                                   ),
                                   alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: const FaIcon(
-                                    FontAwesomeIcons.brain,
+                                    FontAwesomeIcons.cottonBureau,
                                     color: Color(0xFF3BE8B0),
                                     size: 44.0,
                                   ),
@@ -145,7 +144,7 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Text(
-                    'Coherent Breathing (5 - 0 - 5 - 0)',
+                    'Ocean Breath (4 - 16 - 8 - 0)',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
                           fontFamily: 'Jost',
                           fontSize: 20.0,
@@ -177,7 +176,7 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
-                                '#PhysiologicalCoherence',
+                                '#VictoriousBreath',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -208,7 +207,7 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
-                                '#VagalNerveStimulation',
+                                '#UjjayiBreathing',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -230,7 +229,7 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
-                    height: 900.0,
+                    height: 680.0,
                     decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
@@ -239,25 +238,26 @@ class _ResonantBreathingWidgetState extends State<ResonantBreathingWidget> {
                       alignment: const AlignmentDirectional(0.0, -1.0),
                       child: MarkdownBody(
                         data:
-                            '''Resonant breathing, also known as coherent breathing, is a breathing technique that involves slow, deep breathing at a rate of approximately 5-7 breaths per minute. This breathing pattern has been found to have a number of physiological and psychological benefits.
+                            '''The Ocean Breath, or Ujjayi Pranayama, is a captivating breathing practice that evokes the soothing rhythm of the tides. As described by yoga scholar and teacher, Judith Hanson Lasater, it is "the breath that sounds like the ocean" (Lasater, 2000).
 
-The physiological effects of resonant breathing are thought to be mediated by its influence on the autonomic nervous system. Slow, deep breathing has been shown to increase heart rate variability (HRV), which is a measure of the variation in time between consecutive heartbeats (Lehrer & Gevirtz, 2014). Increased HRV is associated with better cardiovascular health and improved regulation of the autonomic nervous system (Shaffer & Ginsberg, 2017).
+To perform the Ocean Breath, one gently constricts the throat, creating a subtle, ocean-like sound as the air passes through. Inhale slowly and deeply, feeling the breath travel down into the belly, then exhale with the same gentle resistance, as if you're whispering the sound of "Haaa" (Rosen, 2002).
 
-Resonant breathing has also been found to have a calming effect on the mind and body. By slowing the breathing rate and increasing the depth of breathing, resonant breathing can activate the parasympathetic nervous system, which is responsible for the "rest and digest" functions of the body (Steffen et al., 2017). This can lead to a reduction in stress and anxiety, as well as improvements in mood and emotional regulation (Zaccaro et al., 2018).
+This practice, as described by yoga teacher and author, Donna Farhi, "allows you to ride the waves of your own breath" (Farhi, 2000). The steady, oceanic rhythm has a hypnotic quality, lulling both the mind and body into a state of deep relaxation.
 
-In addition to these physiological and psychological benefits, resonant breathing has been used as a therapeutic intervention for a variety of health conditions, including hypertension, asthma, and post-traumatic stress disorder (Steffen et al., 2017; Zaccaro et al., 2018).
+Yoga master B.K.S. Iyengar likens the Ocean Breath to the "sound of the primordial vibration of the universe," connecting the practitioner to the ancient rhythms of nature (Iyengar, 1966). As you synchronize your breath with this cosmic pulse, you may find a sense of grounding and centeredness wash over you.
 
-Overall, resonant breathing is a simple and effective technique that can have a range of positive effects on physical and mental health.
+The Ocean Breath is not merely a physical exercise, but a meditative practice that can cultivate a profound sense of inner peace. As yoga teacher Richard Rosen suggests, "It's like listening to the ocean while sitting on the shore" (Rosen, 2002).
 
-References:
 
-Lehrer, P. M., & Gevirtz, R. (2014). Heart rate variability biofeedback: how and why does it work? Frontiers in Psychology, 5, 756. doi:10.3389/fpsyg.2014.00756
+## References:
 
-Shaffer, F., & Ginsberg, J. P. (2017). An overview of heart rate variability metrics and norms. Frontiers in Public Health, 5, 258. doi:10.3389/fpubh.2017.00258
+Farhi, D. (2000). Yoga Mind, Body & Spirit: A Return to Wholeness. Henry Holt and Company.
 
-Steffen, P. R., Austin, T., DeBarros, A., & Brown, T. (2017). The impact of resonance frequency breathing on measures of heart rate variability, blood pressure, and mood. Frontiers in Public Health, 5, 222. doi:10.3389/fpubh.2017.00222
+Iyengar, B.K.S. (1966). Light on Yoga. Schocken Books.
 
-Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., & Gemignani, A. (2018). How breath-control can change your life: a systematic review on psycho-physiological correlates of slow breathing. Frontiers in Human Neuroscience, 12, 353. doi:10.3389/fnhum.2018.00353''',
+Lasater, J.H. (2000). Yoga Journal's Yoga Basics: The Essential Beginner's Guide to Yoga for a Lifetime of Health and Fitness. Henry Holt and Company.
+
+Rosen, R. (2002). The Yoga of Breath: A Step-by-Step Guide to Pranayama. Shambhala Publications.''',
                         selectable: true,
                         onTapLink: (_, url, __) => launchURL(url!),
                       ),
@@ -288,70 +288,60 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: TextFormField(
-                                controller: _model.hourTextController,
-                                focusNode: _model.hourFocusNode,
-                                onFieldSubmitted: (_) async {
-                                  FFAppState().update(() {
-                                    FFAppState().hoursInputToMIlliSeconds =
-                                        int.parse(
-                                            _model.hourTextController.text);
-                                  });
-                                },
-                                autofocus: true,
-                                textInputAction: TextInputAction.done,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  hintText: 'HH',
-                                  hintStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  enabledBorder: InputBorder.none,
-                                  focusedBorder: InputBorder.none,
-                                  errorBorder: InputBorder.none,
-                                  focusedErrorBorder: InputBorder.none,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.hourTextController,
+                              focusNode: _model.hourFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().hoursInputToMIlliSeconds =
+                                      int.parse(_model.hourTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
-                                textAlign: TextAlign.center,
-                                maxLength: 2,
-                                maxLengthEnforcement:
-                                    MaxLengthEnforcement.enforced,
-                                buildCounter: (context,
-                                        {required currentLength,
-                                        required isFocused,
-                                        maxLength}) =>
-                                    null,
-                                keyboardType: TextInputType.number,
-                                validator: _model.hourTextControllerValidator
-                                    .asValidator(context),
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.allow(
-                                      RegExp('^[0-9]*\$|^\$'))
-                                ],
+                                hintText: 'HH',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
+                                  ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.hourTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Align(
@@ -361,79 +351,66 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Jost',
                                     letterSpacing: 0.0,
                                   ),
                             ),
                           ),
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Container(
-                              width: 40.0,
-                              height: 20.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.minutesTextController,
+                              focusNode: _model.minutesFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().minutesInputToMIlliSeconds =
+                                      int.parse(
+                                          _model.minutesTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintText: 'MM',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
-                              child: Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
-                                child: TextFormField(
-                                  controller: _model.minutesTextController,
-                                  focusNode: _model.minutesFocusNode,
-                                  onFieldSubmitted: (_) async {
-                                    FFAppState().update(() {
-                                      FFAppState().minutesInputToMIlliSeconds =
-                                          int.parse(_model
-                                              .minutesTextController.text);
-                                    });
-                                  },
-                                  autofocus: true,
-                                  textInputAction: TextInputAction.done,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    hintText: 'MM',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    enabledBorder: InputBorder.none,
-                                    focusedBorder: InputBorder.none,
-                                    errorBorder: InputBorder.none,
-                                    focusedErrorBorder: InputBorder.none,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  textAlign: TextAlign.center,
-                                  maxLength: 2,
-                                  maxLengthEnforcement:
-                                      MaxLengthEnforcement.enforced,
-                                  buildCounter: (context,
-                                          {required currentLength,
-                                          required isFocused,
-                                          maxLength}) =>
-                                      null,
-                                  keyboardType: TextInputType.number,
-                                  validator: _model
-                                      .minutesTextControllerValidator
-                                      .asValidator(context),
-                                  inputFormatters: [
-                                    FilteringTextInputFormatter.allow(
-                                        RegExp('^[0-9]*\$|^\$'))
-                                  ],
-                                ),
-                              ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.minutesTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Text(
@@ -441,19 +418,13 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'Jost',
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
+                          Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -464,21 +435,21 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                                             _model.secondsTextController.text);
                                   });
                                 },
-                                autofocus: true,
+                                autofocus: false,
                                 textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   hintText: 'SS',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: InputBorder.none,
@@ -489,7 +460,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.center,
@@ -520,7 +491,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                   alignment: const AlignmentDirectional(0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
-                      context.pushNamed('RelaxandLetGo_Resonant');
+                      context.pushNamed('RelaxandLetGo_OceanBreath');
 
                       FFAppState().update(() {
                         FFAppState().totalMilliseconds =

@@ -28,7 +28,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
     _model = createModel(context, () => CustomizationModel());
 
     _model.inhalePatternTextController ??= TextEditingController(
-        text: FFAppState().finalGlobalInhaleSeconds.toString());
+        text: FFAppState().finalGlobalHoldInhaleSeconds.toString());
     _model.inhalePatternFocusNode ??= FocusNode();
 
     _model.holdAfterInhalePatternTextController ??= TextEditingController(
@@ -138,7 +138,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 5.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
@@ -177,15 +177,16 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                   return;
                                 }
                                 setState(() {
-                                  FFAppState().finalGlobalInhaleSeconds =
+                                  FFAppState().finalGlobalHoldInhaleSeconds =
                                       double.parse(_model
                                           .inhalePatternTextController.text);
                                 });
                                 FFAppState().update(() {
                                   FFAppState()
-                                      .finalGlobalInhaleSeconds = FFAppState()
-                                          .finalGlobalInhaleSeconds +
-                                      (FFAppState().finalGlobalInhaleSeconds >
+                                      .finalGlobalHoldInhaleSeconds = FFAppState()
+                                          .finalGlobalHoldInhaleSeconds +
+                                      (FFAppState()
+                                                  .finalGlobalHoldInhaleSeconds >
                                               0.0
                                           ? -1.0
                                           : 0.0);
@@ -193,7 +194,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 setState(() {
                                   _model.inhalePatternTextController?.text =
                                       FFAppState()
-                                          .finalGlobalInhaleSeconds
+                                          .finalGlobalHoldInhaleSeconds
                                           .toString();
                                 });
                               },
@@ -202,15 +203,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                           Form(
                             key: _model.formKey1,
                             autovalidateMode: AutovalidateMode.disabled,
-                            child: Container(
-                              width: 50.0,
-                              height: 30.0,
-                              decoration: const BoxDecoration(),
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 12.0),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              child: Container(
+                                width: 50.0,
+                                height: 30.0,
+                                decoration: const BoxDecoration(),
+                                child: Align(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
                                   child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
@@ -220,7 +220,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       onFieldSubmitted: (_) async {
                                         FFAppState().update(() {
                                           FFAppState()
-                                                  .finalGlobalInhaleSeconds =
+                                                  .finalGlobalHoldInhaleSeconds =
                                               functions.convertToDouble(_model
                                                   .inhalePatternTextController
                                                   .text)!;
@@ -233,14 +233,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: InputBorder.none,
@@ -251,8 +251,9 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: Colors.white,
+                                            fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.center,
@@ -297,18 +298,19 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 return;
                               }
                               FFAppState().update(() {
-                                FFAppState().finalGlobalInhaleSeconds =
+                                FFAppState().finalGlobalHoldInhaleSeconds =
                                     double.parse(_model
                                         .inhalePatternTextController.text);
                               });
                               FFAppState().update(() {
-                                FFAppState().finalGlobalInhaleSeconds =
-                                    FFAppState().finalGlobalInhaleSeconds + 1.0;
+                                FFAppState().finalGlobalHoldInhaleSeconds =
+                                    FFAppState().finalGlobalHoldInhaleSeconds +
+                                        1.0;
                               });
                               setState(() {
                                 _model.inhalePatternTextController?.text =
                                     FFAppState()
-                                        .finalGlobalInhaleSeconds
+                                        .finalGlobalHoldInhaleSeconds
                                         .toString();
                               });
                             },
@@ -370,8 +372,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 size: 5.0,
                               ),
                               onPressed: () async {
-                                if (_model.formKey2.currentState == null ||
-                                    !_model.formKey2.currentState!.validate()) {
+                                if (_model.formKey3.currentState == null ||
+                                    !_model.formKey3.currentState!.validate()) {
                                   return;
                                 }
                                 setState(() {
@@ -401,17 +403,16 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             ),
                           ),
                           Form(
-                            key: _model.formKey2,
+                            key: _model.formKey3,
                             autovalidateMode: AutovalidateMode.disabled,
-                            child: Container(
-                              width: 50.0,
-                              height: 30.0,
-                              decoration: const BoxDecoration(),
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 12.0),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              child: Container(
+                                width: 50.0,
+                                height: 30.0,
+                                decoration: const BoxDecoration(),
+                                child: Align(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
                                   child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
@@ -435,14 +436,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: InputBorder.none,
@@ -453,8 +454,9 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: Colors.white,
+                                            fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.center,
@@ -494,8 +496,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                               size: 5.0,
                             ),
                             onPressed: () async {
-                              if (_model.formKey2.currentState == null ||
-                                  !_model.formKey2.currentState!.validate()) {
+                              if (_model.formKey3.currentState == null ||
+                                  !_model.formKey3.currentState!.validate()) {
                                 return;
                               }
                               FFAppState().update(() {
@@ -606,15 +608,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                           Form(
                             key: _model.formKey5,
                             autovalidateMode: AutovalidateMode.disabled,
-                            child: Container(
-                              width: 50.0,
-                              height: 30.0,
-                              decoration: const BoxDecoration(),
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 12.0),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              child: Container(
+                                width: 50.0,
+                                height: 30.0,
+                                decoration: const BoxDecoration(),
+                                child: Align(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
                                   child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
@@ -637,14 +638,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: InputBorder.none,
@@ -655,8 +656,9 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: Colors.white,
+                                            fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.center,
@@ -808,15 +810,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                           Form(
                             key: _model.formKey4,
                             autovalidateMode: AutovalidateMode.disabled,
-                            child: Container(
-                              width: 50.0,
-                              height: 30.0,
-                              decoration: const BoxDecoration(),
-                              child: Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
-                                      0.0, 8.0, 0.0, 12.0),
+                            child: Align(
+                              alignment: const AlignmentDirectional(0.0, -1.0),
+                              child: Container(
+                                width: 50.0,
+                                height: 30.0,
+                                decoration: const BoxDecoration(),
+                                child: Align(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
                                   child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
@@ -840,14 +841,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         labelStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               color: Colors.white,
                                               letterSpacing: 0.0,
                                             ),
                                         hintStyle: FlutterFlowTheme.of(context)
                                             .labelMedium
                                             .override(
-                                              fontFamily: 'Readex Pro',
+                                              fontFamily: 'Jost',
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: InputBorder.none,
@@ -858,8 +859,9 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: Colors.white,
+                                            fontSize: 16.0,
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.center,
@@ -971,20 +973,18 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       padding:
                           const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                       child: Form(
-                        key: _model.formKey3,
+                        key: _model.formKey2,
                         autovalidateMode: AutovalidateMode.disabled,
                         child: Align(
                           alignment: const AlignmentDirectional(0.0, 0.0),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.max,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Container(
-                                width: 50.0,
-                                height: 20.0,
-                                decoration: const BoxDecoration(),
-                                child: Align(
-                                  alignment: const AlignmentDirectional(1.0, 0.0),
+                          child: Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 0.0, 10.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
                                   child: TextFormField(
                                     controller: _model.hourTextController,
                                     focusNode: _model.hourFocusNode,
@@ -995,23 +995,22 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                                 _model.hourTextController.text);
                                       });
                                     },
-                                    autofocus: true,
+                                    autofocus: false,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             letterSpacing: 0.0,
                                           ),
                                       hintText: 'HH',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: const Color(0xFFA3A9BB),
-                                            fontSize: 20.0,
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: InputBorder.none,
@@ -1022,9 +1021,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'Jost',
                                           color: const Color(0xFF3BE8B0),
-                                          fontSize: 20.0,
                                           letterSpacing: 0.0,
                                         ),
                                     textAlign: TextAlign.center,
@@ -1046,139 +1044,47 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                     ],
                                   ),
                                 ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Text(
-                                  ':',
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        color: const Color(0xFF3BE8B0),
-                                        fontSize: 20.0,
-                                        letterSpacing: 0.0,
-                                      ),
-                                ),
-                              ),
-                              Align(
-                                alignment: const AlignmentDirectional(0.0, 0.0),
-                                child: Container(
-                                  width: 50.0,
-                                  height: 20.0,
-                                  decoration: const BoxDecoration(),
-                                  child: Align(
-                                    alignment: const AlignmentDirectional(0.0, 0.0),
-                                    child: TextFormField(
-                                      controller: _model.minutesTextController,
-                                      focusNode: _model.minutesFocusNode,
-                                      onFieldSubmitted: (_) async {
-                                        FFAppState().update(() {
-                                          FFAppState()
-                                                  .minutesInputToMIlliSeconds =
-                                              int.parse(_model
-                                                  .minutesTextController.text);
-                                        });
-                                      },
-                                      autofocus: true,
-                                      textInputAction: TextInputAction.done,
-                                      obscureText: false,
-                                      decoration: InputDecoration(
-                                        labelStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              letterSpacing: 0.0,
-                                            ),
-                                        hintText: 'MM',
-                                        hintStyle: FlutterFlowTheme.of(context)
-                                            .labelMedium
-                                            .override(
-                                              fontFamily: 'Readex Pro',
-                                              color: const Color(0xFFA3A9BB),
-                                              fontSize: 20.0,
-                                              letterSpacing: 0.0,
-                                            ),
-                                        enabledBorder: InputBorder.none,
-                                        focusedBorder: InputBorder.none,
-                                        errorBorder: InputBorder.none,
-                                        focusedErrorBorder: InputBorder.none,
-                                      ),
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .override(
-                                            fontFamily: 'Readex Pro',
-                                            color: const Color(0xFF3BE8B0),
-                                            fontSize: 20.0,
-                                            letterSpacing: 0.0,
-                                          ),
-                                      textAlign: TextAlign.center,
-                                      maxLength: 2,
-                                      maxLengthEnforcement:
-                                          MaxLengthEnforcement.enforced,
-                                      buildCounter: (context,
-                                              {required currentLength,
-                                              required isFocused,
-                                              maxLength}) =>
-                                          null,
-                                      keyboardType: TextInputType.number,
-                                      validator: _model
-                                          .minutesTextControllerValidator
-                                          .asValidator(context),
-                                      inputFormatters: [
-                                        FilteringTextInputFormatter.allow(
-                                            RegExp('^[0-9]*\$|^\$'))
-                                      ],
-                                    ),
+                                Align(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  child: Text(
+                                    ':',
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyMedium
+                                        .override(
+                                          fontFamily: 'Jost',
+                                          color: const Color(0xFF3BE8B0),
+                                          letterSpacing: 0.0,
+                                        ),
                                   ),
                                 ),
-                              ),
-                              Text(
-                                ':',
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
-                                    .override(
-                                      fontFamily: 'Readex Pro',
-                                      color: const Color(0xFF3BE8B0),
-                                      fontSize: 20.0,
-                                      letterSpacing: 0.0,
-                                    ),
-                              ),
-                              Container(
-                                width: 50.0,
-                                height: 20.0,
-                                decoration: const BoxDecoration(),
-                                child: Align(
-                                  alignment: const AlignmentDirectional(-1.0, 0.0),
+                                Expanded(
                                   child: TextFormField(
-                                    controller: _model.secondsTextController,
-                                    focusNode: _model.secondsFocusNode,
+                                    controller: _model.minutesTextController,
+                                    focusNode: _model.minutesFocusNode,
                                     onFieldSubmitted: (_) async {
                                       FFAppState().update(() {
                                         FFAppState()
-                                                .secondsInputToMIlliSeconds =
+                                                .minutesInputToMIlliSeconds =
                                             int.parse(_model
-                                                .secondsTextController.text);
+                                                .minutesTextController.text);
                                       });
                                     },
-                                    autofocus: true,
+                                    autofocus: false,
                                     textInputAction: TextInputAction.done,
                                     obscureText: false,
                                     decoration: InputDecoration(
                                       labelStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
-                                            fontSize: 30.0,
+                                            fontFamily: 'Jost',
                                             letterSpacing: 0.0,
                                           ),
-                                      hintText: 'SS',
+                                      hintText: 'MM',
                                       hintStyle: FlutterFlowTheme.of(context)
                                           .labelMedium
                                           .override(
-                                            fontFamily: 'Readex Pro',
+                                            fontFamily: 'Jost',
                                             color: const Color(0xFFA3A9BB),
-                                            fontSize: 20.0,
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: InputBorder.none,
@@ -1189,9 +1095,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          fontFamily: 'Readex Pro',
+                                          fontFamily: 'Jost',
                                           color: const Color(0xFF3BE8B0),
-                                          fontSize: 20.0,
                                           letterSpacing: 0.0,
                                         ),
                                     textAlign: TextAlign.center,
@@ -1205,7 +1110,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         null,
                                     keyboardType: TextInputType.number,
                                     validator: _model
-                                        .secondsTextControllerValidator
+                                        .minutesTextControllerValidator
                                         .asValidator(context),
                                     inputFormatters: [
                                       FilteringTextInputFormatter.allow(
@@ -1213,8 +1118,82 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                     ],
                                   ),
                                 ),
-                              ),
-                            ],
+                                Text(
+                                  ':',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Jost',
+                                        color: const Color(0xFF3BE8B0),
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Expanded(
+                                  child: Align(
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
+                                    child: TextFormField(
+                                      controller: _model.secondsTextController,
+                                      focusNode: _model.secondsFocusNode,
+                                      onFieldSubmitted: (_) async {
+                                        FFAppState().update(() {
+                                          FFAppState()
+                                                  .secondsInputToMIlliSeconds =
+                                              int.parse(_model
+                                                  .secondsTextController.text);
+                                        });
+                                      },
+                                      autofocus: false,
+                                      textInputAction: TextInputAction.done,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'Jost',
+                                              letterSpacing: 0.0,
+                                            ),
+                                        hintText: 'SS',
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .labelMedium
+                                            .override(
+                                              fontFamily: 'Jost',
+                                              color: const Color(0xFFA3A9BB),
+                                              letterSpacing: 0.0,
+                                            ),
+                                        enabledBorder: InputBorder.none,
+                                        focusedBorder: InputBorder.none,
+                                        errorBorder: InputBorder.none,
+                                        focusedErrorBorder: InputBorder.none,
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyMedium
+                                          .override(
+                                            fontFamily: 'Jost',
+                                            color: const Color(0xFF3BE8B0),
+                                            letterSpacing: 0.0,
+                                          ),
+                                      textAlign: TextAlign.center,
+                                      maxLength: 2,
+                                      maxLengthEnforcement:
+                                          MaxLengthEnforcement.enforced,
+                                      buildCounter: (context,
+                                              {required currentLength,
+                                              required isFocused,
+                                              maxLength}) =>
+                                          null,
+                                      keyboardType: TextInputType.number,
+                                      validator: _model
+                                          .secondsTextControllerValidator
+                                          .asValidator(context),
+                                      inputFormatters: [
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp('^[0-9]*\$|^\$'))
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -1223,7 +1202,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('RelaxandLetGo_Customized');
@@ -1260,16 +1239,16 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       .holdAfterExhalePatternTextController
                                       .text)!;
                             });
-                            if (_model.formKey3.currentState == null ||
-                                !_model.formKey3.currentState!.validate()) {
+                            if (_model.formKey2.currentState == null ||
+                                !_model.formKey2.currentState!.validate()) {
                               return;
                             }
                             if (_model.formKey1.currentState == null ||
                                 !_model.formKey1.currentState!.validate()) {
                               return;
                             }
-                            if (_model.formKey2.currentState == null ||
-                                !_model.formKey2.currentState!.validate()) {
+                            if (_model.formKey3.currentState == null ||
+                                !_model.formKey3.currentState!.validate()) {
                               return;
                             }
                             if (_model.formKey5.currentState == null ||
@@ -1310,7 +1289,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.white,
                           borderRadius: 20.0,

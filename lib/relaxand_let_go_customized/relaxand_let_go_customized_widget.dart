@@ -131,7 +131,7 @@ class _RelaxandLetGoCustomizedWidgetState
                   if (shouldUpdate) setState(() {});
                 },
                 onEnded: () async {
-                  context.pushNamed(
+                  context.goNamed(
                     'BreathingCircle_Customized',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: const TransitionInfo(
@@ -165,7 +165,9 @@ class _RelaxandLetGoCustomizedWidgetState
                       size: 15.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('diaphragmaticbreathing');
+                      context.pushNamed('Customization');
+
+                      _model.timerController.onStopTimer();
                     },
                   ),
                 ),

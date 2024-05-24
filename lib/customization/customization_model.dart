@@ -7,10 +7,10 @@ class CustomizationModel extends FlutterFlowModel<CustomizationWidget> {
 
   final unfocusNode = FocusNode();
   final formKey1 = GlobalKey<FormState>();
-  final formKey2 = GlobalKey<FormState>();
+  final formKey3 = GlobalKey<FormState>();
   final formKey5 = GlobalKey<FormState>();
   final formKey4 = GlobalKey<FormState>();
-  final formKey3 = GlobalKey<FormState>();
+  final formKey2 = GlobalKey<FormState>();
   // State field(s) for InhalePattern widget.
   FocusNode? inhalePatternFocusNode;
   TextEditingController? inhalePatternTextController;
@@ -81,46 +81,14 @@ class CustomizationModel extends FlutterFlowModel<CustomizationWidget> {
   FocusNode? hourFocusNode;
   TextEditingController? hourTextController;
   String? Function(BuildContext, String?)? hourTextControllerValidator;
-  String? _hourTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
-
   // State field(s) for Minutes widget.
   FocusNode? minutesFocusNode;
   TextEditingController? minutesTextController;
   String? Function(BuildContext, String?)? minutesTextControllerValidator;
-  String? _minutesTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
-
   // State field(s) for Seconds widget.
   FocusNode? secondsFocusNode;
   TextEditingController? secondsTextController;
   String? Function(BuildContext, String?)? secondsTextControllerValidator;
-  String? _secondsTextControllerValidator(BuildContext context, String? val) {
-    if (val == null || val.isEmpty) {
-      return 'Enter a valid number.';
-    }
-
-    if (!RegExp('^[0-9]*\$|^\$').hasMatch(val)) {
-      return 'Enter a valid number.';
-    }
-    return null;
-  }
 
   @override
   void initState(BuildContext context) {
@@ -132,9 +100,6 @@ class CustomizationModel extends FlutterFlowModel<CustomizationWidget> {
         _exhalePatternTextControllerValidator;
     holdAfterExhalePatternTextControllerValidator =
         _holdAfterExhalePatternTextControllerValidator;
-    hourTextControllerValidator = _hourTextControllerValidator;
-    minutesTextControllerValidator = _minutesTextControllerValidator;
-    secondsTextControllerValidator = _secondsTextControllerValidator;
   }
 
   @override

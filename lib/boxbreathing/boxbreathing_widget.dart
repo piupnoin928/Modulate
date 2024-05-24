@@ -68,7 +68,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('List');
             },
           ),
           title: Text(
@@ -96,8 +96,8 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(0.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/669/600',
+                        child: Image.asset(
+                          'assets/images/pexels-mikhail-nilov-6932075.jpg',
                           width: double.infinity,
                           height: 200.0,
                           fit: BoxFit.cover,
@@ -229,7 +229,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
-                    height: 600.0,
+                    height: 620.0,
                     decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
@@ -240,16 +240,16 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                         data:
                             '''Box breathing, also known as square breathing, is a simple breathing technique that can help reduce stress, anxiety, and improve focus and concentration. 
 
-The key to effective box breathing is to maintain a steady, controlled pace throughout the cycle. This pattern of 4-second inhale, 4-second hold, 4-second exhale, and 4-second hold is repeated for several minutes, typically between 5 and 10 minutes[^2].
+The key to effective box breathing is to maintain a steady, controlled pace throughout the cycle. This pattern of 4-second inhale, 4-second hold, 4-second exhale, and 4-second hold is repeated for several minutes, typically between 5 and 10 minutes.
 
-Box breathing is believed to activate the parasympathetic nervous system, which is responsible for the body's "rest and digest" functions. This can help counteract the effects of the sympathetic nervous system, which is responsible for the "fight or flight" response, leading to a reduction in stress and anxiety[^3].
+Box breathing is believed to activate the parasympathetic nervous system, which is responsible for the body's "rest and digest" functions. This can help counteract the effects of the sympathetic nervous system, which is responsible for the "fight or flight" response, leading to a reduction in stress and anxiety.
 
-Additionally, the controlled, rhythmic nature of box breathing can help improve focus and concentration by directing the mind's attention to the breath, rather than the thoughts or worries that may be causing stress[^4].
+Additionally, the controlled, rhythmic nature of box breathing can help improve focus and concentration by directing the mind's attention to the breath, rather than the thoughts or worries that may be causing stress.
 
-[^1]: Jerath, R., Edry, J. W., Barnes, V. A., & Jerath, V. (2006). Physiology of long-term practice of pranayamic breathing in the yogic tradition. Frontiers in Bioscience, 11(1), 301-309.
-[^2]: Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., & Gemignani, A. (2018). How breath-control can change your life: a systematic review on psycho-physiological correlates of slow breathing. Frontiers in human neuroscience, 12, 353.
-[^3]: Perciavalle, V., Blandini, M., Fecarotta, P., Buscemi, A., Di Corrado, D., Bertolo, L., ... & Coco, M. (2017). The role of deep breathing on stress. Neurological Sciences, 38(3), 451-458.
-[^4]: Pal, G. K., Agarwal, A., Karthik, S., Pal, P., & Nanda, N. (2014). Slow pace breathing for yoga relaxation: A focused review. International Journal of Yoga, 7(1), 64.''',
+1. Jerath, R., Edry, J. W., Barnes, V. A., & Jerath, V. (2006). Physiology of long-term practice of pranayamic breathing in the yogic tradition. Frontiers in Bioscience, 11(1), 301-309.
+2. Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., & Gemignani, A. (2018). How breath-control can change your life: a systematic review on psycho-physiological correlates of slow breathing. Frontiers in human neuroscience, 12, 353.
+3.  Perciavalle, V., Blandini, M., Fecarotta, P., Buscemi, A., Di Corrado, D., Bertolo, L., ... & Coco, M. (2017). The role of deep breathing on stress. Neurological Sciences, 38(3), 451-458.
+4. Pal, G. K., Agarwal, A., Karthik, S., Pal, P., & Nanda, N. (2014). Slow pace breathing for yoga relaxation: A focused review. International Journal of Yoga, 7(1), 64.''',
                         selectable: true,
                         onTapLink: (_, url, __) => launchURL(url!),
                       ),
@@ -280,70 +280,60 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: TextFormField(
-                                controller: _model.hourTextController,
-                                focusNode: _model.hourFocusNode,
-                                onFieldSubmitted: (_) async {
-                                  FFAppState().update(() {
-                                    FFAppState().hoursInputToMIlliSeconds =
-                                        int.parse(
-                                            _model.hourTextController.text);
-                                  });
-                                },
-                                autofocus: true,
-                                textInputAction: TextInputAction.done,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  hintText: 'HH',
-                                  hintStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  enabledBorder: InputBorder.none,
-                                  focusedBorder: InputBorder.none,
-                                  errorBorder: InputBorder.none,
-                                  focusedErrorBorder: InputBorder.none,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.hourTextController,
+                              focusNode: _model.hourFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().hoursInputToMIlliSeconds =
+                                      int.parse(_model.hourTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
-                                textAlign: TextAlign.center,
-                                maxLength: 2,
-                                maxLengthEnforcement:
-                                    MaxLengthEnforcement.enforced,
-                                buildCounter: (context,
-                                        {required currentLength,
-                                        required isFocused,
-                                        maxLength}) =>
-                                    null,
-                                keyboardType: TextInputType.number,
-                                validator: _model.hourTextControllerValidator
-                                    .asValidator(context),
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.allow(
-                                      RegExp('^[0-9]*\$|^\$'))
-                                ],
+                                hintText: 'HH',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
+                                  ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.hourTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Align(
@@ -353,79 +343,66 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Jost',
                                     letterSpacing: 0.0,
                                   ),
                             ),
                           ),
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Container(
-                              width: 40.0,
-                              height: 20.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.minutesTextController,
+                              focusNode: _model.minutesFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().minutesInputToMIlliSeconds =
+                                      int.parse(
+                                          _model.minutesTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintText: 'MM',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
-                              child: Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
-                                child: TextFormField(
-                                  controller: _model.minutesTextController,
-                                  focusNode: _model.minutesFocusNode,
-                                  onFieldSubmitted: (_) async {
-                                    FFAppState().update(() {
-                                      FFAppState().minutesInputToMIlliSeconds =
-                                          int.parse(_model
-                                              .minutesTextController.text);
-                                    });
-                                  },
-                                  autofocus: true,
-                                  textInputAction: TextInputAction.done,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    hintText: 'MM',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    enabledBorder: InputBorder.none,
-                                    focusedBorder: InputBorder.none,
-                                    errorBorder: InputBorder.none,
-                                    focusedErrorBorder: InputBorder.none,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  textAlign: TextAlign.center,
-                                  maxLength: 2,
-                                  maxLengthEnforcement:
-                                      MaxLengthEnforcement.enforced,
-                                  buildCounter: (context,
-                                          {required currentLength,
-                                          required isFocused,
-                                          maxLength}) =>
-                                      null,
-                                  keyboardType: TextInputType.number,
-                                  validator: _model
-                                      .minutesTextControllerValidator
-                                      .asValidator(context),
-                                  inputFormatters: [
-                                    FilteringTextInputFormatter.allow(
-                                        RegExp('^[0-9]*\$|^\$'))
-                                  ],
-                                ),
-                              ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.minutesTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Text(
@@ -433,19 +410,13 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'Jost',
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
+                          Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -456,21 +427,21 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                                             _model.secondsTextController.text);
                                   });
                                 },
-                                autofocus: true,
+                                autofocus: false,
                                 textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   hintText: 'SS',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: InputBorder.none,
@@ -481,7 +452,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.center,

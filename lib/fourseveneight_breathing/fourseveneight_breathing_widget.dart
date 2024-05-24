@@ -70,7 +70,7 @@ class _FourseveneightBreathingWidgetState
               size: 30.0,
             ),
             onPressed: () async {
-              context.pop();
+              context.pushNamed('List');
             },
           ),
           title: Text(
@@ -98,8 +98,8 @@ class _FourseveneightBreathingWidgetState
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(0.0),
-                        child: Image.network(
-                          'https://picsum.photos/seed/669/600',
+                        child: Image.asset(
+                          'assets/images/pexels-vlada-karpovich-8940499.jpg',
                           width: double.infinity,
                           height: 200.0,
                           fit: BoxFit.cover,
@@ -178,7 +178,7 @@ class _FourseveneightBreathingWidgetState
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
-                                '#TransformativeTechnique',
+                                '#CalmingBreathPractice',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -209,7 +209,7 @@ class _FourseveneightBreathingWidgetState
                               padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
-                                '#ParasympatheticActivation',
+                                '#BreathworkForWellness',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
@@ -231,7 +231,7 @@ class _FourseveneightBreathingWidgetState
                   padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
-                    height: 600.0,
+                    height: 550.0,
                     decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
@@ -281,70 +281,60 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
-                              child: TextFormField(
-                                controller: _model.hourTextController,
-                                focusNode: _model.hourFocusNode,
-                                onFieldSubmitted: (_) async {
-                                  FFAppState().update(() {
-                                    FFAppState().hoursInputToMIlliSeconds =
-                                        int.parse(
-                                            _model.hourTextController.text);
-                                  });
-                                },
-                                autofocus: true,
-                                textInputAction: TextInputAction.done,
-                                obscureText: false,
-                                decoration: InputDecoration(
-                                  labelStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  hintText: 'HH',
-                                  hintStyle: FlutterFlowTheme.of(context)
-                                      .labelMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  enabledBorder: InputBorder.none,
-                                  focusedBorder: InputBorder.none,
-                                  errorBorder: InputBorder.none,
-                                  focusedErrorBorder: InputBorder.none,
-                                ),
-                                style: FlutterFlowTheme.of(context)
-                                    .bodyMedium
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.hourTextController,
+                              focusNode: _model.hourFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().hoursInputToMIlliSeconds =
+                                      int.parse(_model.hourTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
-                                textAlign: TextAlign.center,
-                                maxLength: 2,
-                                maxLengthEnforcement:
-                                    MaxLengthEnforcement.enforced,
-                                buildCounter: (context,
-                                        {required currentLength,
-                                        required isFocused,
-                                        maxLength}) =>
-                                    null,
-                                keyboardType: TextInputType.number,
-                                validator: _model.hourTextControllerValidator
-                                    .asValidator(context),
-                                inputFormatters: [
-                                  FilteringTextInputFormatter.allow(
-                                      RegExp('^[0-9]*\$|^\$'))
-                                ],
+                                hintText: 'HH',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
+                                  ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.hourTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Align(
@@ -354,79 +344,66 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    fontFamily: 'Readex Pro',
+                                    fontFamily: 'Jost',
                                     letterSpacing: 0.0,
                                   ),
                             ),
                           ),
-                          Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
-                            child: Container(
-                              width: 40.0,
-                              height: 20.0,
-                              decoration: BoxDecoration(
-                                color: FlutterFlowTheme.of(context)
-                                    .secondaryBackground,
+                          Expanded(
+                            child: TextFormField(
+                              controller: _model.minutesTextController,
+                              focusNode: _model.minutesFocusNode,
+                              onFieldSubmitted: (_) async {
+                                FFAppState().update(() {
+                                  FFAppState().minutesInputToMIlliSeconds =
+                                      int.parse(
+                                          _model.minutesTextController.text);
+                                });
+                              },
+                              autofocus: false,
+                              textInputAction: TextInputAction.done,
+                              obscureText: false,
+                              decoration: InputDecoration(
+                                labelStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                hintText: 'MM',
+                                hintStyle: FlutterFlowTheme.of(context)
+                                    .labelMedium
+                                    .override(
+                                      fontFamily: 'Jost',
+                                      letterSpacing: 0.0,
+                                    ),
+                                enabledBorder: InputBorder.none,
+                                focusedBorder: InputBorder.none,
+                                errorBorder: InputBorder.none,
+                                focusedErrorBorder: InputBorder.none,
                               ),
-                              child: Align(
-                                alignment: const AlignmentDirectional(1.0, 0.0),
-                                child: TextFormField(
-                                  controller: _model.minutesTextController,
-                                  focusNode: _model.minutesFocusNode,
-                                  onFieldSubmitted: (_) async {
-                                    FFAppState().update(() {
-                                      FFAppState().minutesInputToMIlliSeconds =
-                                          int.parse(_model
-                                              .minutesTextController.text);
-                                    });
-                                  },
-                                  autofocus: true,
-                                  textInputAction: TextInputAction.done,
-                                  obscureText: false,
-                                  decoration: InputDecoration(
-                                    labelStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    hintText: 'MM',
-                                    hintStyle: FlutterFlowTheme.of(context)
-                                        .labelMedium
-                                        .override(
-                                          fontFamily: 'Readex Pro',
-                                          letterSpacing: 0.0,
-                                        ),
-                                    enabledBorder: InputBorder.none,
-                                    focusedBorder: InputBorder.none,
-                                    errorBorder: InputBorder.none,
-                                    focusedErrorBorder: InputBorder.none,
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Jost',
+                                    letterSpacing: 0.0,
                                   ),
-                                  style: FlutterFlowTheme.of(context)
-                                      .bodyMedium
-                                      .override(
-                                        fontFamily: 'Readex Pro',
-                                        letterSpacing: 0.0,
-                                      ),
-                                  textAlign: TextAlign.center,
-                                  maxLength: 2,
-                                  maxLengthEnforcement:
-                                      MaxLengthEnforcement.enforced,
-                                  buildCounter: (context,
-                                          {required currentLength,
-                                          required isFocused,
-                                          maxLength}) =>
-                                      null,
-                                  keyboardType: TextInputType.number,
-                                  validator: _model
-                                      .minutesTextControllerValidator
-                                      .asValidator(context),
-                                  inputFormatters: [
-                                    FilteringTextInputFormatter.allow(
-                                        RegExp('^[0-9]*\$|^\$'))
-                                  ],
-                                ),
-                              ),
+                              textAlign: TextAlign.center,
+                              maxLength: 2,
+                              maxLengthEnforcement:
+                                  MaxLengthEnforcement.enforced,
+                              buildCounter: (context,
+                                      {required currentLength,
+                                      required isFocused,
+                                      maxLength}) =>
+                                  null,
+                              keyboardType: TextInputType.number,
+                              validator: _model.minutesTextControllerValidator
+                                  .asValidator(context),
+                              inputFormatters: [
+                                FilteringTextInputFormatter.allow(
+                                    RegExp('^[0-9]*\$|^\$'))
+                              ],
                             ),
                           ),
                           Text(
@@ -434,19 +411,13 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                             style: FlutterFlowTheme.of(context)
                                 .bodyMedium
                                 .override(
-                                  fontFamily: 'Readex Pro',
+                                  fontFamily: 'Jost',
                                   letterSpacing: 0.0,
                                 ),
                           ),
-                          Container(
-                            width: 40.0,
-                            height: 20.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
+                          Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(1.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -457,21 +428,21 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                                             _model.secondsTextController.text);
                                   });
                                 },
-                                autofocus: true,
+                                autofocus: false,
                                 textInputAction: TextInputAction.done,
                                 obscureText: false,
                                 decoration: InputDecoration(
                                   labelStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   hintText: 'SS',
                                   hintStyle: FlutterFlowTheme.of(context)
                                       .labelMedium
                                       .override(
-                                        fontFamily: 'Readex Pro',
+                                        fontFamily: 'Jost',
                                         letterSpacing: 0.0,
                                       ),
                                   enabledBorder: InputBorder.none,
@@ -482,7 +453,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                                 style: FlutterFlowTheme.of(context)
                                     .bodyMedium
                                     .override(
-                                      fontFamily: 'Readex Pro',
+                                      fontFamily: 'Jost',
                                       letterSpacing: 0.0,
                                     ),
                                 textAlign: TextAlign.center,

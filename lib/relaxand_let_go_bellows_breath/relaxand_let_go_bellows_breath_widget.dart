@@ -7,20 +7,21 @@ import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'relaxand_let_go_resonant_model.dart';
-export 'relaxand_let_go_resonant_model.dart';
+import 'relaxand_let_go_bellows_breath_model.dart';
+export 'relaxand_let_go_bellows_breath_model.dart';
 
-class RelaxandLetGoResonantWidget extends StatefulWidget {
-  const RelaxandLetGoResonantWidget({super.key});
+class RelaxandLetGoBellowsBreathWidget extends StatefulWidget {
+  const RelaxandLetGoBellowsBreathWidget({super.key});
 
   @override
-  State<RelaxandLetGoResonantWidget> createState() =>
-      _RelaxandLetGoResonantWidgetState();
+  State<RelaxandLetGoBellowsBreathWidget> createState() =>
+      _RelaxandLetGoBellowsBreathWidgetState();
 }
 
-class _RelaxandLetGoResonantWidgetState
-    extends State<RelaxandLetGoResonantWidget> with TickerProviderStateMixin {
-  late RelaxandLetGoResonantModel _model;
+class _RelaxandLetGoBellowsBreathWidgetState
+    extends State<RelaxandLetGoBellowsBreathWidget>
+    with TickerProviderStateMixin {
+  late RelaxandLetGoBellowsBreathModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -29,7 +30,7 @@ class _RelaxandLetGoResonantWidgetState
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => RelaxandLetGoResonantModel());
+    _model = createModel(context, () => RelaxandLetGoBellowsBreathModel());
 
     // On page load action.
     SchedulerBinding.instance.addPostFrameCallback((_) async {
@@ -131,8 +132,8 @@ class _RelaxandLetGoResonantWidgetState
                   if (shouldUpdate) setState(() {});
                 },
                 onEnded: () async {
-                  context.pushNamed(
-                    'BreathingCircle_Resonant',
+                  context.goNamed(
+                    'BreathingCircle_BellowsBreath',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: const TransitionInfo(
                         hasTransition: true,
@@ -165,7 +166,9 @@ class _RelaxandLetGoResonantWidgetState
                       size: 15.0,
                     ),
                     onPressed: () async {
-                      context.pushNamed('ResonantBreathing');
+                      context.pushNamed('BellowsBreath');
+
+                      _model.timerController.onStopTimer();
                     },
                   ),
                 ),

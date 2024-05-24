@@ -24,11 +24,6 @@ class ListModel extends FlutterFlowModel<ListWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
-  // State field(s) for searchBar widget.
-  FocusNode? searchBarFocusNode;
-  TextEditingController? searchBarTextController;
-  String? Function(BuildContext, String?)? searchBarTextControllerValidator;
-  List<String> simpleSearchResults = [];
 
   @override
   void initState(BuildContext context) {}
@@ -36,7 +31,5 @@ class ListModel extends FlutterFlowModel<ListWidget> {
   @override
   void dispose() {
     unfocusNode.dispose();
-    searchBarFocusNode?.dispose();
-    searchBarTextController?.dispose();
   }
 }

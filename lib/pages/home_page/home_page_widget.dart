@@ -107,9 +107,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: const Color(0xFF3BE8B0),
                         textStyle: GoogleFonts.getFont(
-                          'Montserrat',
+                          'Jost',
                           color: const Color(0xFF14181B),
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                         ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
@@ -138,9 +138,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                         color: const Color(0xFF3BE8B0),
                         textStyle: GoogleFonts.getFont(
-                          'Montserrat',
+                          'Jost',
                           color: const Color(0xFF14181B),
-                          fontWeight: FontWeight.bold,
+                          fontWeight: FontWeight.w500,
                         ),
                         elevation: 3.0,
                         borderSide: const BorderSide(
@@ -149,6 +149,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                         ),
                         borderRadius: BorderRadius.circular(20.0),
                       ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Align(
+                    alignment: const AlignmentDirectional(0.0, 2.5),
+                    child: Text(
+                      'Made by Jahnsen Louie Agajona & John Aarol Peñaflor',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Jost',
+                            color: const Color(0xFFA3A9BB),
+                            letterSpacing: 0.0,
+                          ),
                     ),
                   ),
                 ),

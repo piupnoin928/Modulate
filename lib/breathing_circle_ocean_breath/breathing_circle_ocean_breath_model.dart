@@ -1,23 +1,29 @@
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import 'breathing_circle_ocean_breath_widget.dart'
+    show BreathingCircleOceanBreathWidget;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
-import 'relaxand_let_go_resonant_widget.dart' show RelaxandLetGoResonantWidget;
 import 'package:flutter/material.dart';
 
-class RelaxandLetGoResonantModel
-    extends FlutterFlowModel<RelaxandLetGoResonantWidget> {
+class BreathingCircleOceanBreathModel
+    extends FlutterFlowModel<BreathingCircleOceanBreathWidget> {
+  ///  Local state fields for this page.
+
+  int inhaleSeconds = 4;
+
+  int holdAfterInhaleSeconds = 2;
+
+  int exhaleSeconds = 6;
+
+  int? holdAfterExhaleSeconds = 0;
+
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
   // State field(s) for Timer widget.
-  final timerInitialTimeMs = 3000;
-  int timerMilliseconds = 3000;
-  String timerValue = StopWatchTimer.getDisplayTime(
-    3000,
-    hours: false,
-    minute: false,
-    milliSecond: false,
-  );
+  final timerInitialTimeMs = 0;
+  int timerMilliseconds = 0;
+  String timerValue = StopWatchTimer.getDisplayTime(0, milliSecond: false);
   FlutterFlowTimerController timerController =
       FlutterFlowTimerController(StopWatchTimer(mode: StopWatchMode.countDown));
 

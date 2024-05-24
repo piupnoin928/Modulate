@@ -67,11 +67,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const CustomizationWidget(),
         ),
         FFRoute(
-          name: 'CompletePage_Diaphragmatic',
-          path: '/completePageDiaphragmatic',
-          builder: (context, params) => const CompletePageDiaphragmaticWidget(),
-        ),
-        FFRoute(
           name: 'BreathingCircle_Customized',
           path: '/breathingCircleCustomized',
           builder: (context, params) => const BreathingCircleCustomizedWidget(),
@@ -80,11 +75,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'RelaxandLetGo_Customized',
           path: '/relaxandLetGoCustomized',
           builder: (context, params) => const RelaxandLetGoCustomizedWidget(),
-        ),
-        FFRoute(
-          name: 'CompletePage_Cuztomized',
-          path: '/completePageCuztomized',
-          builder: (context, params) => const CompletePageCuztomizedWidget(),
         ),
         FFRoute(
           name: 'boxbreathing',
@@ -102,11 +92,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => const RelaxandLetGoBoxBreathingWidget(),
         ),
         FFRoute(
-          name: 'CompletePage_BoxBreathing',
-          path: '/completePageBoxBreathing',
-          builder: (context, params) => const CompletePageBoxBreathingWidget(),
-        ),
-        FFRoute(
           name: 'fourseveneightBreathing',
           path: '/fourseveneightBreathing',
           builder: (context, params) => const FourseveneightBreathingWidget(),
@@ -120,11 +105,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'BreathingCircle_FourSevenEight',
           path: '/breathingCircleFourSevenEight',
           builder: (context, params) => const BreathingCircleFourSevenEightWidget(),
-        ),
-        FFRoute(
-          name: 'CompletePage_FourSevenEight',
-          path: '/completePageFourSevenEight',
-          builder: (context, params) => const CompletePageFourSevenEightWidget(),
         ),
         FFRoute(
           name: 'CoherentBreathing',
@@ -143,29 +123,39 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               const BreathingCircleCoherentBreathingWidget(),
         ),
         FFRoute(
-          name: 'CompletePage_CoherentBreathing',
-          path: '/completePageCoherentBreathing',
-          builder: (context, params) => const CompletePageCoherentBreathingWidget(),
+          name: 'CompletePage',
+          path: '/completePage',
+          builder: (context, params) => const CompletePageWidget(),
         ),
         FFRoute(
-          name: 'ResonantBreathing',
-          path: '/resonantBreathing',
-          builder: (context, params) => const ResonantBreathingWidget(),
+          name: 'BellowsBreath',
+          path: '/bellowsBreath',
+          builder: (context, params) => const BellowsBreathWidget(),
         ),
         FFRoute(
-          name: 'CompletePage_Resonant',
-          path: '/completePageResonant',
-          builder: (context, params) => const CompletePageResonantWidget(),
+          name: 'RelaxandLetGo_BellowsBreath',
+          path: '/relaxandLetGoBellowsBreath',
+          builder: (context, params) => const RelaxandLetGoBellowsBreathWidget(),
         ),
         FFRoute(
-          name: 'BreathingCircle_Resonant',
-          path: '/breathingCircleResonant',
-          builder: (context, params) => const BreathingCircleResonantWidget(),
+          name: 'BreathingCircle_BellowsBreath',
+          path: '/breathingCircleBellowsBreath',
+          builder: (context, params) => const BreathingCircleBellowsBreathWidget(),
         ),
         FFRoute(
-          name: 'RelaxandLetGo_Resonant',
-          path: '/relaxandLetGoResonant',
-          builder: (context, params) => const RelaxandLetGoResonantWidget(),
+          name: 'BreathingCircle_OceanBreath',
+          path: '/breathingCircleOceanBreath',
+          builder: (context, params) => const BreathingCircleOceanBreathWidget(),
+        ),
+        FFRoute(
+          name: 'OceanBreath',
+          path: '/oceanBreath',
+          builder: (context, params) => const OceanBreathWidget(),
+        ),
+        FFRoute(
+          name: 'RelaxandLetGo_OceanBreath',
+          path: '/relaxandLetGoOceanBreath',
+          builder: (context, params) => const RelaxandLetGoOceanBreathWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

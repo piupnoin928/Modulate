@@ -1,4 +1,4 @@
-package com.mycompany.breathingapp1
+package com.jlcaandjap.modulate
 
 import io.flutter.embedding.android.FlutterActivity
 

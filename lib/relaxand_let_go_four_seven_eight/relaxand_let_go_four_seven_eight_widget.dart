@@ -132,7 +132,7 @@ class _RelaxandLetGoFourSevenEightWidgetState
                   if (shouldUpdate) setState(() {});
                 },
                 onEnded: () async {
-                  context.pushNamed(
+                  context.goNamed(
                     'BreathingCircle_BoxBreathing',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: const TransitionInfo(
@@ -167,6 +167,8 @@ class _RelaxandLetGoFourSevenEightWidgetState
                     ),
                     onPressed: () async {
                       context.pushNamed('fourseveneightBreathing');
+
+                      _model.timerController.onStopTimer();
                     },
                   ),
                 ),

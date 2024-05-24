@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'complete_page_cuztomized_widget.dart' show CompletePageCuztomizedWidget;
+import 'complete_page_widget.dart' show CompletePageWidget;
 import 'package:flutter/material.dart';
 
-class CompletePageCuztomizedModel
-    extends FlutterFlowModel<CompletePageCuztomizedWidget> {
+class CompletePageModel extends FlutterFlowModel<CompletePageWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();

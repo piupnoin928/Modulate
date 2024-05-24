@@ -132,7 +132,7 @@ class _RelaxandLetGoCoherentBreathingWidgetState
                   if (shouldUpdate) setState(() {});
                 },
                 onEnded: () async {
-                  context.pushNamed(
+                  context.goNamed(
                     'BreathingCircle_Diaphragmatic',
                     extra: <String, dynamic>{
                       kTransitionInfoKey: const TransitionInfo(
@@ -167,6 +167,8 @@ class _RelaxandLetGoCoherentBreathingWidgetState
                     ),
                     onPressed: () async {
                       context.pushNamed('CoherentBreathing');
+
+                      _model.timerController.onStopTimer();
                     },
                   ),
                 ),
