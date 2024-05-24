@@ -66,10 +66,9 @@ class _BreathingCircleCoherentBreathingWidgetState
                 Padding(
                   padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                   child: FlutterFlowTimer(
-                    initialTime: valueOrDefault<int>(
-                      FFAppState().totalMilliseconds,
-                      60000,
-                    ),
+                    initialTime: FFAppState().totalMilliseconds == 0
+                        ? 60000
+                        : FFAppState().totalMilliseconds,
                     getDisplayTime: (value) => StopWatchTimer.getDisplayTime(
                         value,
                         milliSecond: false),
