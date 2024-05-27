@@ -79,15 +79,10 @@ class _BreathingCircleCustomizedWidgetState
                       if (shouldUpdate) setState(() {});
                     },
                     onEnded: () async {
-                      context.goNamed(
-                        'CompletePage',
-                        extra: <String, dynamic>{
-                          kTransitionInfoKey: const TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                          ),
-                        },
-                      );
+                      if (Navigator.of(context).canPop()) {
+                        context.pop();
+                      }
+                      context.pushNamed('CompletePage');
                     },
                     textAlign: TextAlign.start,
                     style: FlutterFlowTheme.of(context).headlineSmall.override(

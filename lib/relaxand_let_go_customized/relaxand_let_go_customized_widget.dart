@@ -135,15 +135,10 @@ class _RelaxandLetGoCustomizedWidgetState
                     if (shouldUpdate) setState(() {});
                   },
                   onEnded: () async {
-                    context.goNamed(
-                      'BreathingCircle_Customized',
-                      extra: <String, dynamic>{
-                        kTransitionInfoKey: const TransitionInfo(
-                          hasTransition: true,
-                          transitionType: PageTransitionType.fade,
-                        ),
-                      },
-                    );
+                    if (Navigator.of(context).canPop()) {
+                      context.pop();
+                    }
+                    context.pushNamed('BreathingCircle_Customized');
                   },
                   textAlign: TextAlign.start,
                   style: FlutterFlowTheme.of(context).headlineSmall.override(
