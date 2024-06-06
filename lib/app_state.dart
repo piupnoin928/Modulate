@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
   static FFAppState _instance = FFAppState._internal();
@@ -51,85 +52,85 @@ class FFAppState extends ChangeNotifier {
 
   int _globalInhaleSeconds = 0;
   int get globalInhaleSeconds => _globalInhaleSeconds;
-  set globalInhaleSeconds(int value) {
-    _globalInhaleSeconds = value;
-    prefs.setInt('ff_globalInhaleSeconds', value);
+  set globalInhaleSeconds(int _value) {
+    _globalInhaleSeconds = _value;
+    prefs.setInt('ff_globalInhaleSeconds', _value);
   }
 
   int _globalExhaleSeconds = 0;
   int get globalExhaleSeconds => _globalExhaleSeconds;
-  set globalExhaleSeconds(int value) {
-    _globalExhaleSeconds = value;
+  set globalExhaleSeconds(int _value) {
+    _globalExhaleSeconds = _value;
   }
 
   int _globalHoldAfterInhaleSeconds = 0;
   int get globalHoldAfterInhaleSeconds => _globalHoldAfterInhaleSeconds;
-  set globalHoldAfterInhaleSeconds(int value) {
-    _globalHoldAfterInhaleSeconds = value;
+  set globalHoldAfterInhaleSeconds(int _value) {
+    _globalHoldAfterInhaleSeconds = _value;
   }
 
   int _hoursInputToMIlliSeconds = 0;
   int get hoursInputToMIlliSeconds => _hoursInputToMIlliSeconds;
-  set hoursInputToMIlliSeconds(int value) {
-    _hoursInputToMIlliSeconds = value;
+  set hoursInputToMIlliSeconds(int _value) {
+    _hoursInputToMIlliSeconds = _value;
   }
 
   int _minutesInputToMIlliSeconds = 0;
   int get minutesInputToMIlliSeconds => _minutesInputToMIlliSeconds;
-  set minutesInputToMIlliSeconds(int value) {
-    _minutesInputToMIlliSeconds = value;
+  set minutesInputToMIlliSeconds(int _value) {
+    _minutesInputToMIlliSeconds = _value;
   }
 
   int _secondsInputToMIlliSeconds = 0;
   int get secondsInputToMIlliSeconds => _secondsInputToMIlliSeconds;
-  set secondsInputToMIlliSeconds(int value) {
-    _secondsInputToMIlliSeconds = value;
+  set secondsInputToMIlliSeconds(int _value) {
+    _secondsInputToMIlliSeconds = _value;
   }
 
   int _totalMilliseconds = 60000;
   int get totalMilliseconds => _totalMilliseconds;
-  set totalMilliseconds(int value) {
-    _totalMilliseconds = value;
+  set totalMilliseconds(int _value) {
+    _totalMilliseconds = _value;
   }
 
   int _globalHoldAfterExhaleSeconds = 0;
   int get globalHoldAfterExhaleSeconds => _globalHoldAfterExhaleSeconds;
-  set globalHoldAfterExhaleSeconds(int value) {
-    _globalHoldAfterExhaleSeconds = value;
+  set globalHoldAfterExhaleSeconds(int _value) {
+    _globalHoldAfterExhaleSeconds = _value;
   }
 
   bool _isTrue = true;
   bool get isTrue => _isTrue;
-  set isTrue(bool value) {
-    _isTrue = value;
+  set isTrue(bool _value) {
+    _isTrue = _value;
   }
 
   double _finalGlobalInhaleSeconds = 0.0;
   double get finalGlobalInhaleSeconds => _finalGlobalInhaleSeconds;
-  set finalGlobalInhaleSeconds(double value) {
-    _finalGlobalInhaleSeconds = value;
-    prefs.setDouble('ff_finalGlobalInhaleSeconds', value);
+  set finalGlobalInhaleSeconds(double _value) {
+    _finalGlobalInhaleSeconds = _value;
+    prefs.setDouble('ff_finalGlobalInhaleSeconds', _value);
   }
 
   double _finalGlobalExhaleSeconds = 0.0;
   double get finalGlobalExhaleSeconds => _finalGlobalExhaleSeconds;
-  set finalGlobalExhaleSeconds(double value) {
-    _finalGlobalExhaleSeconds = value;
-    prefs.setDouble('ff_finalGlobalExhaleSeconds', value);
+  set finalGlobalExhaleSeconds(double _value) {
+    _finalGlobalExhaleSeconds = _value;
+    prefs.setDouble('ff_finalGlobalExhaleSeconds', _value);
   }
 
   double _finalGlobalHoldInhaleSeconds = 0.0;
   double get finalGlobalHoldInhaleSeconds => _finalGlobalHoldInhaleSeconds;
-  set finalGlobalHoldInhaleSeconds(double value) {
-    _finalGlobalHoldInhaleSeconds = value;
-    prefs.setDouble('ff_finalGlobalHoldInhaleSeconds', value);
+  set finalGlobalHoldInhaleSeconds(double _value) {
+    _finalGlobalHoldInhaleSeconds = _value;
+    prefs.setDouble('ff_finalGlobalHoldInhaleSeconds', _value);
   }
 
   double _finalGlobalHoldExhaleSeconds = 0.0;
   double get finalGlobalHoldExhaleSeconds => _finalGlobalHoldExhaleSeconds;
-  set finalGlobalHoldExhaleSeconds(double value) {
-    _finalGlobalHoldExhaleSeconds = value;
-    prefs.setDouble('ff_finalGlobalHoldExhaleSeconds', value);
+  set finalGlobalHoldExhaleSeconds(double _value) {
+    _finalGlobalHoldExhaleSeconds = _value;
+    prefs.setDouble('ff_finalGlobalHoldExhaleSeconds', _value);
   }
 }
 

@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 
 import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:wakelock_plus/wakelock_plus.dart';
+import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 class CupertinoBreathe extends StatefulWidget {
   const CupertinoBreathe({
@@ -62,6 +64,7 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
   @override
   void initState() {
     super.initState();
+    enableWakeLock();
 
     // Adjust the values if they are null or 0
     double inhaleSeconds =
@@ -129,8 +132,17 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
 
   @override
   void dispose() {
+    disableWakeLock();
     _controller.dispose();
     super.dispose();
+  }
+
+  void enableWakeLock() async {
+    await Wakelock.enable();
+  }
+
+  void disableWakeLock() async {
+    await Wakelock.disable();
   }
 
   @override

@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'list_model.dart';
 export 'list_model.dart';
 
@@ -55,7 +58,7 @@ class _ListWidgetState extends State<ListWidget> {
                       'assets/images/processingly-2pUP1Ts1bmo-unsplash.jpg',
                     ).image,
                   ),
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(20.0),
                     bottomRight: Radius.circular(20.0),
                     topLeft: Radius.circular(0.0),
@@ -65,18 +68,18 @@ class _ListWidgetState extends State<ListWidget> {
                 child: Container(
                   width: 100.0,
                   height: 170.0,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     color: Color(0x9A1D2428),
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 12.0),
+                        EdgeInsetsDirectional.fromSTEB(16.0, 64.0, 16.0, 12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 8.0),
                           child: Text(
                             'Breathing Techniques',
@@ -84,20 +87,20 @@ class _ListWidgetState extends State<ListWidget> {
                                 .displaySmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Align(
-                          alignment: const AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                           child: Text(
                             'Here are the featured techniques found inside the app.',
                             style: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xBEFFFFFF),
+                                  color: Color(0xBEFFFFFF),
                                   fontSize: 13.0,
                                   letterSpacing: 0.0,
                                 ),
@@ -109,12 +112,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -127,13 +130,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -146,7 +149,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Diaphragmatic Breathing',
@@ -154,14 +157,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'Diaphragmatic breathing, also known as belly breathing or abdominal breathing, is a breathing technique that focuses on fully engaging the diaphragm, the main muscle responsible for respiration.',
@@ -175,7 +178,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -190,7 +193,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -199,7 +202,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -213,7 +216,7 @@ class _ListWidgetState extends State<ListWidget> {
                                   onTap: () async {
                                     context.pushNamed('diaphragmaticbreathing');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,
@@ -229,12 +232,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -247,13 +250,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -266,7 +269,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Box Breathing',
@@ -274,14 +277,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'The beauty of box breathing lies in its elegant symmetry - inhaling, holding, exhaling, and pausing for 4 seconds each creates a soothing square wave that synchronizes physiology and quiets the mind. This balanced rhythm triggers beneficial neurological and physiological responses, shifting the nervous system from the \"fight-or-flight\" state to the calming \"rest-and-digest\" mode.',
@@ -295,7 +298,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -310,7 +313,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -319,7 +322,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -333,7 +336,7 @@ class _ListWidgetState extends State<ListWidget> {
                                   onTap: () async {
                                     context.pushNamed('boxbreathing');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,
@@ -349,12 +352,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -367,13 +370,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -382,12 +385,12 @@ class _ListWidgetState extends State<ListWidget> {
                               width: double.infinity,
                               height: 150.0,
                               fit: BoxFit.cover,
-                              alignment: const Alignment(0.0, 0.0),
+                              alignment: Alignment(0.0, 0.0),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             '4-7-8 Breathing (Relaxing Breath)',
@@ -395,14 +398,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'Far from just a relaxation exercise, the 4-7-8 method is a versatile tool that can be applied in high-pressure situations, difficult conversations, or moments of decision-making. It empowers you to respond thoughtfully, rather than react automatically, guiding you towards more intentional and effective behaviors.',
@@ -416,7 +419,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -431,7 +434,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -440,7 +443,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -455,7 +458,7 @@ class _ListWidgetState extends State<ListWidget> {
                                     context
                                         .pushNamed('fourseveneightBreathing');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,
@@ -471,12 +474,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -489,13 +492,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -504,12 +507,12 @@ class _ListWidgetState extends State<ListWidget> {
                               width: double.infinity,
                               height: 150.0,
                               fit: BoxFit.cover,
-                              alignment: const Alignment(0.0, -0.6),
+                              alignment: Alignment(0.0, -0.6),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Coherent Breathing',
@@ -517,14 +520,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'Coherent Breathing, also known as resonant breathing, is a powerful technique that synchronizes your cardiovascular, respiratory, and nervous systems. Developed by Dr. David Servan-Schreiber, a renowned psychiatrist and pioneer in the field of integrative medicine, this breathing practice is designed to induce a state of physiological coherence (Lehrer et al., 2000).',
@@ -538,7 +541,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -553,7 +556,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -562,7 +565,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -576,7 +579,7 @@ class _ListWidgetState extends State<ListWidget> {
                                   onTap: () async {
                                     context.pushNamed('CoherentBreathing');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,
@@ -592,12 +595,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -610,13 +613,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -625,12 +628,12 @@ class _ListWidgetState extends State<ListWidget> {
                               width: double.infinity,
                               height: 150.0,
                               fit: BoxFit.cover,
-                              alignment: const Alignment(0.0, 0.4),
+                              alignment: Alignment(0.0, 0.4),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Bellows Breath',
@@ -638,14 +641,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'Imagine your lungs are a set of blacksmith\'s bellows, pumping vigorously to stoke the coals. With each inhale, you draw in a gust of fresh oxygen, filling your body to the brim. Then, with a mighty exhale, you expel the spent air, as if blowing life into the embers of your being.',
@@ -659,7 +662,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -674,7 +677,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -683,7 +686,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -697,7 +700,7 @@ class _ListWidgetState extends State<ListWidget> {
                                   onTap: () async {
                                     context.pushNamed('BellowsBreath');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,
@@ -713,12 +716,12 @@ class _ListWidgetState extends State<ListWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
+                padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 8.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).secondaryBackground,
-                    boxShadow: const [
+                    boxShadow: [
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Color(0x411D2429),
@@ -731,13 +734,13 @@ class _ListWidgetState extends State<ListWidget> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(4.0),
+                    padding: EdgeInsets.all(4.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 1.0, 1.0, 1.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(6.0),
@@ -746,12 +749,12 @@ class _ListWidgetState extends State<ListWidget> {
                               width: double.infinity,
                               height: 150.0,
                               fit: BoxFit.cover,
-                              alignment: const Alignment(0.0, -0.25),
+                              alignment: Alignment(0.0, -0.25),
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 8.0, 0.0, 0.0),
                           child: Text(
                             'Ocean Breath',
@@ -759,14 +762,14 @@ class _ListWidgetState extends State<ListWidget> {
                                 .headlineSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: const Color(0xFF3BE8B0),
+                                  color: Color(0xFF3BE8B0),
                                   fontSize: 20.0,
                                   letterSpacing: 0.0,
                                 ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 4.0, 8.0, 0.0),
                           child: AutoSizeText(
                             'Imagine your lungs are a set of blacksmith\'s bellows, pumping vigorously to stoke the coals. With each inhale, you draw in a gust of fresh oxygen, filling your body to the brim. Then, with a mighty exhale, you expel the spent air, as if blowing life into the embers of your being.',
@@ -780,7 +783,7 @@ class _ListWidgetState extends State<ListWidget> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 16.0, 0.0),
                           child: InkWell(
                             splashColor: Colors.transparent,
@@ -795,7 +798,7 @@ class _ListWidgetState extends State<ListWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsetsDirectional.fromSTEB(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 8.0, 4.0, 8.0),
                                   child: Text(
                                     'More details',
@@ -804,7 +807,7 @@ class _ListWidgetState extends State<ListWidget> {
                                         .titleLarge
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: const Color(0xFF3BE8B0),
+                                          color: Color(0xFF3BE8B0),
                                           fontSize: 16.0,
                                           letterSpacing: 0.0,
                                         ),
@@ -818,7 +821,7 @@ class _ListWidgetState extends State<ListWidget> {
                                   onTap: () async {
                                     context.pushNamed('OceanBreath');
                                   },
-                                  child: const Icon(
+                                  child: Icon(
                                     Icons.chevron_right_rounded,
                                     color: Color(0xFF57636C),
                                     size: 24.0,

@@ -8,6 +8,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'bellows_breath_model.dart';
 export 'bellows_breath_model.dart';
 
@@ -53,16 +55,16 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: const Color(0xFF14181B),
+        backgroundColor: Color(0xFF14181B),
         appBar: AppBar(
-          backgroundColor: const Color(0xFF14181B),
+          backgroundColor: Color(0xFF14181B),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_rounded,
               color: Color(0xFF3BE8B0),
               size: 30.0,
@@ -75,11 +77,11 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
             'Bellows Breath',
             style: FlutterFlowTheme.of(context).bodyLarge.override(
                   fontFamily: 'Jost',
-                  color: const Color(0xFF3BE8B0),
+                  color: Color(0xFF3BE8B0),
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: const [],
+          actions: [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -90,7 +92,7 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
+                Container(
                   height: 240.0,
                   child: Stack(
                     children: [
@@ -104,9 +106,9 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                         ),
                       ),
                       Align(
-                        alignment: const AlignmentDirectional(-1.0, 1.0),
+                        alignment: AlignmentDirectional(-1.0, 1.0),
                         child: Padding(
-                          padding: const EdgeInsetsDirectional.fromSTEB(
+                          padding: EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 8.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12.0),
@@ -116,18 +118,18 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                                 sigmaY: 2.0,
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.all(2.0),
+                                padding: EdgeInsets.all(2.0),
                                 child: Container(
                                   width: 64.0,
                                   height: 64.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
-                                      color: const Color(0xFF3BE8B0),
+                                      color: Color(0xFF3BE8B0),
                                     ),
                                   ),
-                                  alignment: const AlignmentDirectional(0.0, 0.0),
-                                  child: const FaIcon(
+                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  child: FaIcon(
                                     FontAwesomeIcons.cottonBureau,
                                     color: Color(0xFF3BE8B0),
                                     size: 44.0,
@@ -142,7 +144,7 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Text(
                     'Bellows Breath (2 - 0 - 2 - 0)',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -160,7 +162,7 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                     children: [
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -171,9 +173,9 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                             ),
                           ),
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#RapidBreathing',
@@ -191,7 +193,7 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                       ),
                       Padding(
                         padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -202,9 +204,9 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                             ),
                           ),
                           child: Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
+                              padding: EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#RespiratoryStimulation',
@@ -220,22 +222,22 @@ class _BellowsBreathWidgetState extends State<BellowsBreathWidget> {
                         ),
                       ),
                     ]
-                        .divide(const SizedBox(width: 8.0))
-                        .addToStart(const SizedBox(width: 16.0))
-                        .addToEnd(const SizedBox(width: 16.0)),
+                        .divide(SizedBox(width: 8.0))
+                        .addToStart(SizedBox(width: 16.0))
+                        .addToEnd(SizedBox(width: 16.0)),
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
                     height: 1075.0,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
                     ),
                     child: Align(
-                      alignment: const AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.0, -1.0),
                       child: MarkdownBody(
                         data:
                             '''Bellows Breath, also known as "Bhastrika" in yoga, is a transformative pranayama technique that goes beyond simple respiratory benefits. This forceful, rhythmic breathing practice acts as a catalyst, igniting the inner fires of the body and mind to forge a profound state of physiological and psychological arousal.
@@ -268,7 +270,7 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Set the timer',
                     textAlign: TextAlign.center,
@@ -283,10 +285,10 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                   key: _model.formKey,
                   autovalidateMode: AutovalidateMode.disabled,
                   child: Align(
-                    alignment: const AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -296,10 +298,9 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                               controller: _model.hourTextController,
                               focusNode: _model.hourFocusNode,
                               onFieldSubmitted: (_) async {
-                                FFAppState().update(() {
-                                  FFAppState().hoursInputToMIlliSeconds =
-                                      int.parse(_model.hourTextController.text);
-                                });
+                                FFAppState().hoursInputToMIlliSeconds =
+                                    int.parse(_model.hourTextController.text);
+                                FFAppState().update(() {});
                               },
                               autofocus: false,
                               textInputAction: TextInputAction.done,
@@ -348,7 +349,7 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                             ),
                           ),
                           Align(
-                            alignment: const AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               ':',
                               style: FlutterFlowTheme.of(context)
@@ -364,11 +365,10 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                               controller: _model.minutesTextController,
                               focusNode: _model.minutesFocusNode,
                               onFieldSubmitted: (_) async {
-                                FFAppState().update(() {
-                                  FFAppState().minutesInputToMIlliSeconds =
-                                      int.parse(
-                                          _model.minutesTextController.text);
-                                });
+                                FFAppState().minutesInputToMIlliSeconds =
+                                    int.parse(
+                                        _model.minutesTextController.text);
+                                FFAppState().update(() {});
                               },
                               autofocus: false,
                               textInputAction: TextInputAction.done,
@@ -427,16 +427,15 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                           ),
                           Expanded(
                             child: Align(
-                              alignment: const AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
                                 onFieldSubmitted: (_) async {
-                                  FFAppState().update(() {
-                                    FFAppState().secondsInputToMIlliSeconds =
-                                        int.parse(
-                                            _model.secondsTextController.text);
-                                  });
+                                  FFAppState().secondsInputToMIlliSeconds =
+                                      int.parse(
+                                          _model.secondsTextController.text);
+                                  FFAppState().update(() {});
                                 },
                                 autofocus: false,
                                 textInputAction: TextInputAction.done,
@@ -491,19 +490,17 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                   ),
                 ),
                 Align(
-                  alignment: const AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('RelaxandLetGo_BellowsBreath');
 
-                      FFAppState().update(() {
-                        FFAppState().totalMilliseconds =
-                            functions.convertToMilliseconds(
-                                int.tryParse(_model.hourTextController.text),
-                                int.tryParse(_model.minutesTextController.text),
-                                int.tryParse(
-                                    _model.secondsTextController.text));
-                      });
+                      FFAppState().totalMilliseconds =
+                          functions.convertToMilliseconds(
+                              int.tryParse(_model.hourTextController.text),
+                              int.tryParse(_model.minutesTextController.text),
+                              int.tryParse(_model.secondsTextController.text));
+                      FFAppState().update(() {});
                       if (_model.formKey.currentState == null ||
                           !_model.formKey.currentState!.validate()) {
                         return;
@@ -513,18 +510,18 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Jost',
-                                color: const Color(0xFF3BE8B0),
+                                color: Color(0xFF3BE8B0),
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: const BorderSide(
+                      borderSide: BorderSide(
                         color: Color(0xFF3BE8B0),
                         width: 1.0,
                       ),
@@ -532,7 +529,7 @@ Saraswati, S. S. (2002). Asana Pranayama Mudra Bandha. Yoga Publications Trust.'
                     ),
                   ),
                 ),
-              ].divide(const SizedBox(height: 12.0)),
+              ].divide(SizedBox(height: 12.0)),
             ),
           ),
         ),

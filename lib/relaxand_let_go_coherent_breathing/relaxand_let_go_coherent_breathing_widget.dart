@@ -3,10 +3,14 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:math';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'relaxand_let_go_coherent_breathing_model.dart';
 export 'relaxand_let_go_coherent_breathing_model.dart';
 
@@ -90,9 +94,9 @@ class _RelaxandLetGoCoherentBreathingWidgetState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 150.0, 0.0, 8.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 150.0, 0.0, 8.0),
                   child: Text(
                     'Relax',
                     style: FlutterFlowTheme.of(context).titleSmall.override(
@@ -105,12 +109,12 @@ class _RelaxandLetGoCoherentBreathingWidgetState
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
+                padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 5.0),
                 child: Text(
                   'Starting session in',
                   style: FlutterFlowTheme.of(context).bodyMedium.override(
                         fontFamily: 'Roboto',
-                        color: const Color(0xFFA3A9BB),
+                        color: Color(0xFFA3A9BB),
                         fontSize: 14.0,
                         letterSpacing: 0.0,
                       ),
@@ -125,7 +129,7 @@ class _RelaxandLetGoCoherentBreathingWidgetState
                   milliSecond: false,
                 ),
                 controller: _model.timerController,
-                updateStateInterval: const Duration(milliseconds: 1000),
+                updateStateInterval: Duration(milliseconds: 1000),
                 onChanged: (value, displayTime, shouldUpdate) {
                   _model.timerMilliseconds = value;
                   _model.timerValue = displayTime;
@@ -140,27 +144,30 @@ class _RelaxandLetGoCoherentBreathingWidgetState
                 textAlign: TextAlign.start,
                 style: FlutterFlowTheme.of(context).headlineSmall.override(
                       fontFamily: 'Roboto',
-                      color: const Color(0xFFA3A9BB),
+                      color: Color(0xFFA3A9BB),
                       fontSize: 14.0,
                       letterSpacing: 0.0,
                       fontWeight: FontWeight.normal,
                     ),
               ).animateOnPageLoad(animationsMap['timerOnPageLoadAnimation']!),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 240.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 240.0, 0.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: Colors.white,
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.close_sharp,
                       color: Colors.white,
                       size: 15.0,
                     ),
                     onPressed: () async {
+                      if (Navigator.of(context).canPop()) {
+                        context.pop();
+                      }
                       context.pushNamed('CoherentBreathing');
 
                       _model.timerController.onStopTimer();

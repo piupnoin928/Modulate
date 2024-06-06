@@ -1,7 +1,10 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'complete_page_model.dart';
 export 'complete_page_model.dart';
 
@@ -46,9 +49,9 @@ class _CompletePageWidgetState extends State<CompletePageWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 150.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 150.0, 0.0, 0.0),
                   child: Text(
                     'Complete',
                     style: FlutterFlowTheme.of(context).titleSmall.override(
@@ -61,15 +64,15 @@ class _CompletePageWidgetState extends State<CompletePageWidget> {
                 ),
               ),
               Align(
-                alignment: const AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 280.0, 0.0, 0.0),
+                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 280.0, 0.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: Colors.white,
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.close_sharp,
                       color: Colors.white,
                       size: 15.0,
