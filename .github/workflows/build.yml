@@ -39,7 +39,10 @@ jobs:
      # Get Flutter project dependencies
      - name: Get dependencies
        run: flutter pub get
-
+     # Build apks
+     - name: Build apks
+       run: flutter build apk --split-per-abi
+       
      - name: Sign App Bundle
        uses: r0adkll/sign-android-release@v1   
        id: sign_app
