@@ -25,7 +25,8 @@
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Modulate"
-        android:requestLegacyExternalStorage="true" >
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/round_launcher" >
         <activity
             android:name="com.jlca.modulate.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

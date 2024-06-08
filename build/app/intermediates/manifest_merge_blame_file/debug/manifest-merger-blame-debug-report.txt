@@ -30,7 +30,7 @@
 21-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
 22
 23    <application
-23-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:9:5-63:19
+23-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:9:5-64:19
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 24-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
 25        android:debuggable="true"
@@ -38,124 +38,126 @@
 26-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:12:9-43
 27        android:label="Modulate"
 27-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:10:9-33
-28        android:requestLegacyExternalStorage="true" >
-28-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:13:9-52
-29        <activity
-29-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:15:9-53:20
-30            android:name="com.jlca.modulate.MainActivity"
-30-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:16:13-41
-31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-31-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:20:13-163
-32            android:exported="true"
-32-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:17:13-36
-33            android:hardwareAccelerated="true"
-33-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:21:13-47
-34            android:launchMode="singleTop"
-34-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:18:13-43
-35            android:theme="@style/LaunchTheme"
-35-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:19:13-47
-36            android:windowSoftInputMode="adjustResize" >
-36-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:22:13-55
-37
-38            <!--
-39                 Specifies an Android theme to apply to this Activity as soon as
-40                 the Android process has started. This theme is visible to the user
-41                 while the Flutter UI initializes. After that, this theme continues
-42                 to determine the Window background behind the Flutter UI.
-43            -->
-44            <meta-data
-44-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:27:13-30:17
-45                android:name="io.flutter.embedding.android.NormalTheme"
-45-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:28:15-70
-46                android:resource="@style/NormalTheme" />
-46-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:29:15-52
-47            <!--
-48                 Displays an Android View that continues showing the launch screen
-49                 Drawable until Flutter paints its first frame, then this splash
-50                 screen fades out. A splash screen is useful to avoid any visual
-51                 gap between the end of Android's launch screen and the painting of
-52                 Flutter's first frame.
-53            -->
-54            <meta-data
-54-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:36:13-39:17
-55                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-55-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:37:15-79
-56                android:resource="@drawable/launch_background" />
-56-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:38:15-61
-57
-58            <intent-filter>
-58-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:40:13-43:29
-59                <action android:name="android.intent.action.MAIN" />
-59-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:41:17-68
-59-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:41:25-66
-60
-61                <category android:name="android.intent.category.LAUNCHER" />
-61-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:17-76
-61-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:27-74
-62            </intent-filter>
-63            <!-- Deep linking -->
-64            <meta-data
-64-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:13-90
-65                android:name="flutter_deeplinking_enabled"
-65-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:24-66
-66                android:value="true" />
-66-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:67-87
-67
-68            <intent-filter android:autoVerify="true" >
-68-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:13-51:29
-68-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:28-53
-69                <action android:name="android.intent.action.VIEW" />
-69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:17-69
-69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:25-66
-70
-71                <category android:name="android.intent.category.DEFAULT" />
-71-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:17-76
-71-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:27-73
-72                <category android:name="android.intent.category.BROWSABLE" />
-72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:17-78
-72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:27-75
-73
-74                <data
-74-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:17-79
-75                    android:host="modulate.com"
-75-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:49-76
-76                    android:scheme="modulate" />
-76-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:23-48
-77            </intent-filter>
-78        </activity>
-79
-80        <!--
-81             Don't delete the meta-data below.
-82             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-83        -->
-84        <meta-data
-84-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:57:9-59:33
-85            android:name="flutterEmbedding"
-85-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:58:13-44
-86            android:value="2" />
-86-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:59:13-30
-87
-88        <activity
-88-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
-89            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-89-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
-90            android:exported="false"
-90-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
-91            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-91-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
-92
-93        <uses-library
-93-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-94            android:name="androidx.window.extensions"
-94-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-95            android:required="false" />
-95-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-96        <uses-library
-96-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-97            android:name="androidx.window.sidecar"
-97-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-98            android:required="false" />
-98-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-99    </application>
-100
-101</manifest>
+28        android:requestLegacyExternalStorage="true"
+28-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:14:9-52
+29        android:roundIcon="@mipmap/round_launcher" >
+29-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:13:9-51
+30        <activity
+30-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:16:9-54:20
+31            android:name="com.jlca.modulate.MainActivity"
+31-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:17:13-41
+32            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+32-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:21:13-163
+33            android:exported="true"
+33-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:18:13-36
+34            android:hardwareAccelerated="true"
+34-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:22:13-47
+35            android:launchMode="singleTop"
+35-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:19:13-43
+36            android:theme="@style/LaunchTheme"
+36-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:20:13-47
+37            android:windowSoftInputMode="adjustResize" >
+37-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:23:13-55
+38
+39            <!--
+40                 Specifies an Android theme to apply to this Activity as soon as
+41                 the Android process has started. This theme is visible to the user
+42                 while the Flutter UI initializes. After that, this theme continues
+43                 to determine the Window background behind the Flutter UI.
+44            -->
+45            <meta-data
+45-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:28:13-31:17
+46                android:name="io.flutter.embedding.android.NormalTheme"
+46-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:29:15-70
+47                android:resource="@style/NormalTheme" />
+47-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:30:15-52
+48            <!--
+49                 Displays an Android View that continues showing the launch screen
+50                 Drawable until Flutter paints its first frame, then this splash
+51                 screen fades out. A splash screen is useful to avoid any visual
+52                 gap between the end of Android's launch screen and the painting of
+53                 Flutter's first frame.
+54            -->
+55            <meta-data
+55-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:37:13-40:17
+56                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+56-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:38:15-79
+57                android:resource="@drawable/launch_background" />
+57-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:39:15-61
+58
+59            <intent-filter>
+59-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:41:13-44:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:17-68
+60-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:43:17-76
+62-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:43:27-74
+63            </intent-filter>
+64            <!-- Deep linking -->
+65            <meta-data
+65-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:13-90
+66                android:name="flutter_deeplinking_enabled"
+66-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:24-66
+67                android:value="true" />
+67-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:67-87
+68
+69            <intent-filter android:autoVerify="true" >
+69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:13-52:29
+69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:28-53
+70                <action android:name="android.intent.action.VIEW" />
+70-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:17-69
+70-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:25-66
+71
+72                <category android:name="android.intent.category.DEFAULT" />
+72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:17-76
+72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:27-73
+73                <category android:name="android.intent.category.BROWSABLE" />
+73-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:17-78
+73-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:27-75
+74
+75                <data
+75-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:51:17-79
+76                    android:host="modulate.com"
+76-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:51:49-76
+77                    android:scheme="modulate" />
+77-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:51:23-48
+78            </intent-filter>
+79        </activity>
+80
+81        <!--
+82             Don't delete the meta-data below.
+83             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+84        -->
+85        <meta-data
+85-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:58:9-60:33
+86            android:name="flutterEmbedding"
+86-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:59:13-44
+87            android:value="2" />
+87-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:60:13-30
+88
+89        <activity
+89-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+90            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+90-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+91            android:exported="false"
+91-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+92            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+92-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+93
+94        <uses-library
+94-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+95            android:name="androidx.window.extensions"
+95-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+96            android:required="false" />
+96-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+97        <uses-library
+97-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+98            android:name="androidx.window.sidecar"
+98-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+99            android:required="false" />
+99-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+100    </application>
+101
+102</manifest>

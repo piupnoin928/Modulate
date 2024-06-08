@@ -6,7 +6,6 @@ import '/flutter_flow/custom_functions.dart' as functions;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'customization_model.dart';
 export 'customization_model.dart';
@@ -71,24 +70,24 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF14181B),
+        backgroundColor: const Color(0xFF14181B),
         appBar: AppBar(
-          backgroundColor: Color(0xFF14181B),
+          backgroundColor: const Color(0xFF14181B),
           automaticallyImplyLeading: false,
           title: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: const AlignmentDirectional(0.0, 0.0),
             child: Text(
               'Customized Breathing Technique',
               style: FlutterFlowTheme.of(context).bodyLarge.override(
                     fontFamily: 'Jost',
-                    color: Color(0xFF3BE8B0),
+                    color: const Color(0xFF3BE8B0),
                     fontSize: 20.0,
                     letterSpacing: 0.0,
                     fontWeight: FontWeight.bold,
                   ),
             ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: true,
           elevation: 0.0,
         ),
@@ -97,14 +96,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: const AlignmentDirectional(0.0, 0.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             42.0, 10.0, 42.0, 20.0),
                         child: Text(
                           'Customized breathing patterns are personalized exercises designed to fit the unique requirements of an individual\'s physiology and goals. By syncing breath with specific rhythms or cues, these patterns can help deepen relaxation, reduce stress, and improve cognitive function.',
@@ -120,17 +119,17 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(42.0, 5.0, 0.0, 5.0),
+                            const EdgeInsetsDirectional.fromSTEB(42.0, 5.0, 0.0, 5.0),
                         child: Text(
                           'Breathing pattern',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Jost',
-                                    color: Color(0xFF3BE8B0),
+                                    color: const Color(0xFF3BE8B0),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                   ),
@@ -139,12 +138,12 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 42.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Inhale',
@@ -159,15 +158,15 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 130.0, 0.0, 0.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 5.0,
                               borderWidth: 1.0,
                               buttonSize: 20.0,
-                              fillColor: Color(0xFF3BE8B0),
-                              icon: FaIcon(
+                              fillColor: const Color(0xFF3BE8B0),
+                              icon: const FaIcon(
                                 FontAwesomeIcons.minus,
                                 color: Color(0xFF14181B),
                                 size: 5.0,
@@ -202,14 +201,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             key: _model.formKey1,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Container(
                                 width: 50.0,
                                 height: 30.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, -5.0),
-                                  child: Container(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
+                                  child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
                                       controller:
@@ -283,8 +282,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             borderRadius: 5.0,
                             borderWidth: 1.0,
                             buttonSize: 20.0,
-                            fillColor: Color(0xFF3BE8B0),
-                            icon: Icon(
+                            fillColor: const Color(0xFF3BE8B0),
+                            icon: const Icon(
                               Icons.add,
                               color: Color(0xFF14181B),
                               size: 5.0,
@@ -317,7 +316,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               42.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Time in seconds',
@@ -325,7 +324,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Roboto',
-                                  color: Color(0xFFA3A9BB),
+                                  color: const Color(0xFFA3A9BB),
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -334,12 +333,12 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 42.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Hold',
@@ -354,14 +353,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 139.0, 0.0, 0.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderRadius: 5.0,
                               borderWidth: 1.0,
                               buttonSize: 20.0,
-                              fillColor: Color(0xFF3BE8B0),
-                              icon: FaIcon(
+                              fillColor: const Color(0xFF3BE8B0),
+                              icon: const FaIcon(
                                 FontAwesomeIcons.minus,
                                 color: Color(0xFF14181B),
                                 size: 5.0,
@@ -398,14 +397,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             key: _model.formKey3,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Container(
                                 width: 50.0,
                                 height: 30.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, -5.0),
-                                  child: Container(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
+                                  child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
                                       controller: _model
@@ -480,8 +479,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             borderRadius: 5.0,
                             borderWidth: 1.0,
                             buttonSize: 20.0,
-                            fillColor: Color(0xFF3BE8B0),
-                            icon: Icon(
+                            fillColor: const Color(0xFF3BE8B0),
+                            icon: const Icon(
                               Icons.add,
                               color: Color(0xFF14181B),
                               size: 5.0,
@@ -516,7 +515,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               42.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Time in seconds',
@@ -524,7 +523,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Roboto',
-                                  color: Color(0xFFA3A9BB),
+                                  color: const Color(0xFFA3A9BB),
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -533,12 +532,12 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 42.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Exhale',
@@ -553,15 +552,15 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 126.0, 0.0, 0.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 5.0,
                               borderWidth: 1.0,
                               buttonSize: 20.0,
-                              fillColor: Color(0xFF3BE8B0),
-                              icon: FaIcon(
+                              fillColor: const Color(0xFF3BE8B0),
+                              icon: const FaIcon(
                                 FontAwesomeIcons.minus,
                                 color: Color(0xFF14181B),
                                 size: 5.0,
@@ -595,14 +594,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             key: _model.formKey5,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Container(
                                 width: 50.0,
                                 height: 30.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, -5.0),
-                                  child: Container(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
+                                  child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
                                       controller:
@@ -675,8 +674,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             borderRadius: 5.0,
                             borderWidth: 1.0,
                             buttonSize: 20.0,
-                            fillColor: Color(0xFF3BE8B0),
-                            icon: Icon(
+                            fillColor: const Color(0xFF3BE8B0),
+                            icon: const Icon(
                               Icons.add,
                               color: Color(0xFF14181B),
                               size: 5.0,
@@ -708,7 +707,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               42.0, 0.0, 0.0, 0.0),
                           child: Text(
                             'Time in seconds',
@@ -716,7 +715,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                 .bodyMedium
                                 .override(
                                   fontFamily: 'Roboto',
-                                  color: Color(0xFFA3A9BB),
+                                  color: const Color(0xFFA3A9BB),
                                   letterSpacing: 0.0,
                                 ),
                           ),
@@ -725,12 +724,12 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 17.0, 0.0, 0.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 42.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Hold',
@@ -745,15 +744,15 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             ),
                           ),
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 139.0, 0.0, 0.0, 0.0),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 5.0,
                               borderWidth: 1.0,
                               buttonSize: 20.0,
-                              fillColor: Color(0xFF3BE8B0),
-                              icon: FaIcon(
+                              fillColor: const Color(0xFF3BE8B0),
+                              icon: const FaIcon(
                                 FontAwesomeIcons.minus,
                                 color: Color(0xFF14181B),
                                 size: 5.0,
@@ -790,14 +789,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             key: _model.formKey4,
                             autovalidateMode: AutovalidateMode.disabled,
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, -1.0),
+                              alignment: const AlignmentDirectional(0.0, -1.0),
                               child: Container(
                                 width: 50.0,
                                 height: 30.0,
-                                decoration: BoxDecoration(),
+                                decoration: const BoxDecoration(),
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, -5.0),
-                                  child: Container(
+                                  alignment: const AlignmentDirectional(0.0, -5.0),
+                                  child: SizedBox(
                                     width: 50.0,
                                     child: TextFormField(
                                       controller: _model
@@ -872,8 +871,8 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                             borderRadius: 5.0,
                             borderWidth: 1.0,
                             buttonSize: 20.0,
-                            fillColor: Color(0xFF3BE8B0),
-                            icon: Icon(
+                            fillColor: const Color(0xFF3BE8B0),
+                            icon: const Icon(
                               Icons.add,
                               color: Color(0xFF14181B),
                               size: 5.0,
@@ -906,12 +905,12 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 42.0, 0.0, 0.0, 0.0),
                             child: Text(
                               'Time in seconds',
@@ -919,7 +918,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                   .bodyMedium
                                   .override(
                                     fontFamily: 'Roboto',
-                                    color: Color(0xFFA3A9BB),
+                                    color: const Color(0xFFA3A9BB),
                                     letterSpacing: 0.0,
                                   ),
                             ),
@@ -928,9 +927,9 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: const AlignmentDirectional(-1.0, 0.0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(
+                        padding: const EdgeInsetsDirectional.fromSTEB(
                             42.0, 0.0, 0.0, 10.0),
                         child: Text(
                           'Session Duration',
@@ -938,7 +937,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     fontFamily: 'Jost',
-                                    color: Color(0xFF3BE8B0),
+                                    color: const Color(0xFF3BE8B0),
                                     fontSize: 14.0,
                                     letterSpacing: 0.0,
                                   ),
@@ -947,14 +946,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                     ),
                     Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                       child: Form(
                         key: _model.formKey2,
                         autovalidateMode: AutovalidateMode.disabled,
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: const AlignmentDirectional(0.0, 0.0),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 10.0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
@@ -985,7 +984,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Jost',
-                                            color: Color(0xFFA3A9BB),
+                                            color: const Color(0xFFA3A9BB),
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: InputBorder.none,
@@ -997,7 +996,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: Color(0xFF3BE8B0),
+                                          color: const Color(0xFF3BE8B0),
                                           letterSpacing: 0.0,
                                         ),
                                     textAlign: TextAlign.center,
@@ -1020,14 +1019,14 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
                                   child: Text(
                                     ':',
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: Color(0xFF3BE8B0),
+                                          color: const Color(0xFF3BE8B0),
                                           letterSpacing: 0.0,
                                         ),
                                   ),
@@ -1057,7 +1056,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                           .labelMedium
                                           .override(
                                             fontFamily: 'Jost',
-                                            color: Color(0xFFA3A9BB),
+                                            color: const Color(0xFFA3A9BB),
                                             letterSpacing: 0.0,
                                           ),
                                       enabledBorder: InputBorder.none,
@@ -1069,7 +1068,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                         .bodyMedium
                                         .override(
                                           fontFamily: 'Jost',
-                                          color: Color(0xFF3BE8B0),
+                                          color: const Color(0xFF3BE8B0),
                                           letterSpacing: 0.0,
                                         ),
                                     textAlign: TextAlign.center,
@@ -1097,13 +1096,13 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                       .bodyMedium
                                       .override(
                                         fontFamily: 'Jost',
-                                        color: Color(0xFF3BE8B0),
+                                        color: const Color(0xFF3BE8B0),
                                         letterSpacing: 0.0,
                                       ),
                                 ),
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: const AlignmentDirectional(0.0, 0.0),
                                     child: TextFormField(
                                       controller: _model.secondsTextController,
                                       focusNode: _model.secondsFocusNode,
@@ -1129,7 +1128,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                             .labelMedium
                                             .override(
                                               fontFamily: 'Jost',
-                                              color: Color(0xFFA3A9BB),
+                                              color: const Color(0xFFA3A9BB),
                                               letterSpacing: 0.0,
                                             ),
                                         enabledBorder: InputBorder.none,
@@ -1141,7 +1140,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                                           .bodyMedium
                                           .override(
                                             fontFamily: 'Jost',
-                                            color: Color(0xFF3BE8B0),
+                                            color: const Color(0xFF3BE8B0),
                                             letterSpacing: 0.0,
                                           ),
                                       textAlign: TextAlign.center,
@@ -1171,10 +1170,10 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: const AlignmentDirectional(0.0, 0.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 15.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
                             context.pushNamed('RelaxandLetGo_Customized');
@@ -1230,20 +1229,20 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                           text: 'Start Session',
                           options: FFButtonOptions(
                             height: 40.0,
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 24.0, 0.0, 24.0, 0.0),
-                            iconPadding: EdgeInsetsDirectional.fromSTEB(
+                            iconPadding: const EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 0.0),
-                            color: Color(0xFF14181B),
+                            color: const Color(0xFF14181B),
                             textStyle: FlutterFlowTheme.of(context)
                                 .titleSmall
                                 .override(
                                   fontFamily: 'Jost',
-                                  color: Color(0xFF3BE8B0),
+                                  color: const Color(0xFF3BE8B0),
                                   letterSpacing: 0.0,
                                 ),
                             elevation: 3.0,
-                            borderSide: BorderSide(
+                            borderSide: const BorderSide(
                               color: Color(0xFF3BE8B0),
                               width: 1.0,
                             ),
@@ -1253,16 +1252,16 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: const AlignmentDirectional(0.0, 1.0),
                       child: Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.white,
                           borderRadius: 20.0,
                           borderWidth: 1.0,
                           buttonSize: 40.0,
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.close_sharp,
                             color: Colors.white,
                             size: 15.0,

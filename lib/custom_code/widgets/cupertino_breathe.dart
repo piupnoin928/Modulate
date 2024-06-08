@@ -1,8 +1,6 @@
 // Automatic FlutterFlow imports
-import '/flutter_flow/flutter_flow_theme.dart';
-import '/flutter_flow/flutter_flow_util.dart';
-import 'index.dart'; // Imports other custom widgets
-import '/flutter_flow/custom_functions.dart'; // Imports custom functions
+// Imports other custom widgets
+// Imports custom functions
 import 'package:flutter/material.dart';
 // Begin custom widget code
 // DO NOT REMOVE OR MODIFY THE CODE ABOVE!
@@ -164,12 +162,12 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
             },
           ),
         ),
-        SizedBox(height: 20), // Space between the circle and text
+        const SizedBox(height: 20), // Space between the circle and text
         Text(
           breathingPhase,
           style: GoogleFonts.jost(
             fontSize: 24,
-            color: Color(0xFF3BE8B0),
+            color: const Color(0xFF3BE8B0),
           ),
         ),
       ],
@@ -179,14 +177,14 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
 
 class _BreathePainter extends CustomPainter {
   _BreathePainter(this.animationValue,
-      {this.count = 10, Color color = const Color(0xFF61bea2)})
+      {Color color = const Color(0xFF61bea2)})
       : circlePaint = Paint()
           ..color = color
           ..blendMode = BlendMode.screen,
         super(repaint: Listenable.merge([]));
 
   final double animationValue;
-  final int count;
+  final int count = 0;
   final Paint circlePaint;
 
   @override

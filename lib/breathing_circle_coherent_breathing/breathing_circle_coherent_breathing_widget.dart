@@ -2,12 +2,10 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'breathing_circle_coherent_breathing_model.dart';
 export 'breathing_circle_coherent_breathing_model.dart';
@@ -64,7 +62,7 @@ class _BreathingCircleCoherentBreathingWidgetState
             mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(0.0, 16.0, 0.0, 0.0),
                 child: FlutterFlowTimer(
                   initialTime: FFAppState().totalMilliseconds == 0
                       ? 60000
@@ -72,7 +70,7 @@ class _BreathingCircleCoherentBreathingWidgetState
                   getDisplayTime: (value) =>
                       StopWatchTimer.getDisplayTime(value, milliSecond: false),
                   controller: _model.timerController,
-                  updateStateInterval: Duration(milliseconds: 1000),
+                  updateStateInterval: const Duration(milliseconds: 1000),
                   onChanged: (value, displayTime, shouldUpdate) {
                     _model.timerMilliseconds = value;
                     _model.timerValue = displayTime;
@@ -92,11 +90,11 @@ class _BreathingCircleCoherentBreathingWidgetState
                       ),
                 ),
               ),
-              Align(
+              const Align(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 100.0, 0.0, 0.0),
-                  child: Container(
+                  child: SizedBox(
                     width: 300.0,
                     height: 300.0,
                     child: custom_widgets.CupertinoBreathe(
@@ -111,15 +109,15 @@ class _BreathingCircleCoherentBreathingWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: const AlignmentDirectional(0.0, 1.0),
                 child: Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0.0, 200.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(0.0, 200.0, 0.0, 0.0),
                   child: FlutterFlowIconButton(
                     borderColor: Colors.white,
                     borderRadius: 20.0,
                     borderWidth: 1.0,
                     buttonSize: 40.0,
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.close_sharp,
                       color: Colors.white,
                       size: 15.0,

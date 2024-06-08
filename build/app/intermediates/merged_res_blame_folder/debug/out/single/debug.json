@@ -4,6 +4,10 @@
         "source": "com.jlca.modulate.app-main-7:/mipmap-hdpi/ic_launcher.png"
     },
     {
+        "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-xhdpi_round_launcher.png.flat",
+        "source": "com.jlca.modulate.app-main-7:/mipmap-xhdpi/round_launcher.png"
+    },
+    {
         "merged": "com.jlca.modulate.app-merged_res-13:/drawable_launch_background.xml.flat",
         "source": "com.jlca.modulate.app-main-7:/drawable/launch_background.xml"
     },
@@ -16,11 +20,27 @@
         "source": "com.jlca.modulate.app-main-7:/mipmap-xhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-xxhdpi_round_launcher.png.flat",
+        "source": "com.jlca.modulate.app-main-7:/mipmap-xxhdpi/round_launcher.png"
+    },
+    {
+        "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-xxxhdpi_round_launcher.png.flat",
+        "source": "com.jlca.modulate.app-main-7:/mipmap-xxxhdpi/round_launcher.png"
+    },
+    {
+        "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-mdpi_round_launcher.png.flat",
+        "source": "com.jlca.modulate.app-main-7:/mipmap-mdpi/round_launcher.png"
+    },
+    {
         "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "com.jlca.modulate.app-main-7:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
         "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "com.jlca.modulate.app-main-7:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.jlca.modulate.app-merged_res-13:/mipmap-hdpi_round_launcher.png.flat",
+        "source": "com.jlca.modulate.app-main-7:/mipmap-hdpi/round_launcher.png"
     }
 ]

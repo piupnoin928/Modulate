@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'diaphragmaticbreathing_model.dart';
 export 'diaphragmaticbreathing_model.dart';
 
@@ -57,16 +55,16 @@ class _DiaphragmaticbreathingWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF14181B),
+        backgroundColor: const Color(0xFF14181B),
         appBar: AppBar(
-          backgroundColor: Color(0xFF14181B),
+          backgroundColor: const Color(0xFF14181B),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Color(0xFF3BE8B0),
               size: 30.0,
@@ -79,11 +77,11 @@ class _DiaphragmaticbreathingWidgetState
             'Diaphragmatic Breathing',
             style: FlutterFlowTheme.of(context).bodyLarge.override(
                   fontFamily: 'Jost',
-                  color: Color(0xFF3BE8B0),
+                  color: const Color(0xFF3BE8B0),
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -94,7 +92,7 @@ class _DiaphragmaticbreathingWidgetState
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: 240.0,
                   child: Stack(
                     children: [
@@ -105,13 +103,13 @@ class _DiaphragmaticbreathingWidgetState
                           width: double.infinity,
                           height: 200.0,
                           fit: BoxFit.cover,
-                          alignment: Alignment(0.0, -0.65),
+                          alignment: const Alignment(0.0, -0.65),
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 1.0),
+                        alignment: const AlignmentDirectional(-1.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 8.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12.0),
@@ -121,18 +119,18 @@ class _DiaphragmaticbreathingWidgetState
                                 sigmaY: 2.0,
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: Container(
                                   width: 64.0,
                                   height: 64.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
-                                      color: Color(0xFF3BE8B0),
+                                      color: const Color(0xFF3BE8B0),
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: FaIcon(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  child: const FaIcon(
                                     FontAwesomeIcons.wind,
                                     color: Color(0xFF3BE8B0),
                                     size: 44.0,
@@ -147,7 +145,7 @@ class _DiaphragmaticbreathingWidgetState
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Text(
                     'Diaphragmatic Breathing (4 - 2 - 6 - 0)',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -165,7 +163,7 @@ class _DiaphragmaticbreathingWidgetState
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -176,9 +174,9 @@ class _DiaphragmaticbreathingWidgetState
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#OxygenationImprovement',
@@ -196,7 +194,7 @@ class _DiaphragmaticbreathingWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -207,9 +205,9 @@ class _DiaphragmaticbreathingWidgetState
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#BellyRising',
@@ -225,22 +223,22 @@ class _DiaphragmaticbreathingWidgetState
                         ),
                       ),
                     ]
-                        .divide(SizedBox(width: 8.0))
-                        .addToStart(SizedBox(width: 16.0))
-                        .addToEnd(SizedBox(width: 16.0)),
+                        .divide(const SizedBox(width: 8.0))
+                        .addToStart(const SizedBox(width: 16.0))
+                        .addToEnd(const SizedBox(width: 16.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
                     height: 560.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: MarkdownBody(
                         data:
                             '''Diaphragmatic breathing is a deep breathing technique that involves conscious engagement of the diaphragm, allowing for more efficient air exchange and numerous health benefits. It's particularly effective in reducing physiological and psychological stress, improving pulmonary function, and enhancing relaxation[[1]](https://europepmc.org/article/MED/31436595).
@@ -263,7 +261,7 @@ class _DiaphragmaticbreathingWidgetState
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Set the timer',
                     textAlign: TextAlign.center,
@@ -278,10 +276,10 @@ class _DiaphragmaticbreathingWidgetState
                   key: _model.formKey,
                   autovalidateMode: AutovalidateMode.disabled,
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -342,7 +340,7 @@ class _DiaphragmaticbreathingWidgetState
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               ':',
                               style: FlutterFlowTheme.of(context)
@@ -420,7 +418,7 @@ class _DiaphragmaticbreathingWidgetState
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -483,7 +481,7 @@ class _DiaphragmaticbreathingWidgetState
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('RelaxandLetGo_Diaphragmatic');
@@ -503,18 +501,18 @@ class _DiaphragmaticbreathingWidgetState
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Jost',
-                                color: Color(0xFF3BE8B0),
+                                color: const Color(0xFF3BE8B0),
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF3BE8B0),
                         width: 1.0,
                       ),
@@ -522,7 +520,7 @@ class _DiaphragmaticbreathingWidgetState
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 12.0)),
+              ].divide(const SizedBox(height: 12.0)),
             ),
           ),
         ),

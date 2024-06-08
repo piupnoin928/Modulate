@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'boxbreathing_model.dart';
 export 'boxbreathing_model.dart';
 
@@ -55,16 +53,16 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF14181B),
+        backgroundColor: const Color(0xFF14181B),
         appBar: AppBar(
-          backgroundColor: Color(0xFF14181B),
+          backgroundColor: const Color(0xFF14181B),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Color(0xFF3BE8B0),
               size: 30.0,
@@ -77,11 +75,11 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
             'Box Breathing',
             style: FlutterFlowTheme.of(context).bodyLarge.override(
                   fontFamily: 'Jost',
-                  color: Color(0xFF3BE8B0),
+                  color: const Color(0xFF3BE8B0),
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -92,7 +90,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: 240.0,
                   child: Stack(
                     children: [
@@ -106,9 +104,9 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 1.0),
+                        alignment: const AlignmentDirectional(-1.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 8.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12.0),
@@ -118,18 +116,18 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                                 sigmaY: 2.0,
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: Container(
                                   width: 64.0,
                                   height: 64.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
-                                      color: Color(0xFF3BE8B0),
+                                      color: const Color(0xFF3BE8B0),
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: FaIcon(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  child: const FaIcon(
                                     FontAwesomeIcons.brain,
                                     color: Color(0xFF3BE8B0),
                                     size: 44.0,
@@ -144,7 +142,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Text(
                     'Box Breathing (4 - 4 - 4 - 4)',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -162,7 +160,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -173,9 +171,9 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#4SecondPause',
@@ -193,7 +191,7 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -204,9 +202,9 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#ParasympatheticActivation',
@@ -222,22 +220,22 @@ class _BoxbreathingWidgetState extends State<BoxbreathingWidget> {
                         ),
                       ),
                     ]
-                        .divide(SizedBox(width: 8.0))
-                        .addToStart(SizedBox(width: 16.0))
-                        .addToEnd(SizedBox(width: 16.0)),
+                        .divide(const SizedBox(width: 8.0))
+                        .addToStart(const SizedBox(width: 16.0))
+                        .addToEnd(const SizedBox(width: 16.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
                     height: 620.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: MarkdownBody(
                         data:
                             '''Box breathing, also known as square breathing, is a simple breathing technique that can help reduce stress, anxiety, and improve focus and concentration. 
@@ -259,7 +257,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Set the timer',
                     textAlign: TextAlign.center,
@@ -274,10 +272,10 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                   key: _model.formKey,
                   autovalidateMode: AutovalidateMode.disabled,
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -338,7 +336,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               ':',
                               style: FlutterFlowTheme.of(context)
@@ -416,7 +414,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -479,7 +477,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('RelaxandLetGo_BoxBreathing');
@@ -499,18 +497,18 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Jost',
-                                color: Color(0xFF3BE8B0),
+                                color: const Color(0xFF3BE8B0),
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF3BE8B0),
                         width: 1.0,
                       ),
@@ -518,7 +516,7 @@ Additionally, the controlled, rhythmic nature of box breathing can help improve 
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 12.0)),
+              ].divide(const SizedBox(height: 12.0)),
             ),
           ),
         ),

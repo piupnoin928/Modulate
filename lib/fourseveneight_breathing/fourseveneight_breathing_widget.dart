@@ -8,8 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'fourseveneight_breathing_model.dart';
 export 'fourseveneight_breathing_model.dart';
 
@@ -57,16 +55,16 @@ class _FourseveneightBreathingWidgetState
           : FocusScope.of(context).unfocus(),
       child: Scaffold(
         key: scaffoldKey,
-        backgroundColor: Color(0xFF14181B),
+        backgroundColor: const Color(0xFF14181B),
         appBar: AppBar(
-          backgroundColor: Color(0xFF14181B),
+          backgroundColor: const Color(0xFF14181B),
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
             borderRadius: 30.0,
             borderWidth: 1.0,
             buttonSize: 60.0,
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_back_rounded,
               color: Color(0xFF3BE8B0),
               size: 30.0,
@@ -79,11 +77,11 @@ class _FourseveneightBreathingWidgetState
             '4-7-8 Breathing (Relaxing Breath)',
             style: FlutterFlowTheme.of(context).bodyLarge.override(
                   fontFamily: 'Jost',
-                  color: Color(0xFF3BE8B0),
+                  color: const Color(0xFF3BE8B0),
                   letterSpacing: 0.0,
                 ),
           ),
-          actions: [],
+          actions: const [],
           centerTitle: false,
           elevation: 0.0,
         ),
@@ -94,7 +92,7 @@ class _FourseveneightBreathingWidgetState
               mainAxisSize: MainAxisSize.max,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   height: 240.0,
                   child: Stack(
                     children: [
@@ -108,9 +106,9 @@ class _FourseveneightBreathingWidgetState
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-1.0, 1.0),
+                        alignment: const AlignmentDirectional(-1.0, 1.0),
                         child: Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(
+                          padding: const EdgeInsetsDirectional.fromSTEB(
                               16.0, 0.0, 0.0, 8.0),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12.0),
@@ -120,18 +118,18 @@ class _FourseveneightBreathingWidgetState
                                 sigmaY: 2.0,
                               ),
                               child: Padding(
-                                padding: EdgeInsets.all(2.0),
+                                padding: const EdgeInsets.all(2.0),
                                 child: Container(
                                   width: 64.0,
                                   height: 64.0,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10.0),
                                     border: Border.all(
-                                      color: Color(0xFF3BE8B0),
+                                      color: const Color(0xFF3BE8B0),
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
-                                  child: FaIcon(
+                                  alignment: const AlignmentDirectional(0.0, 0.0),
+                                  child: const FaIcon(
                                     FontAwesomeIcons.cottonBureau,
                                     color: Color(0xFF3BE8B0),
                                     size: 44.0,
@@ -146,7 +144,7 @@ class _FourseveneightBreathingWidgetState
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Text(
                     '4-7-8 Breathing (4 - 7 - 8 - 0)',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -164,7 +162,7 @@ class _FourseveneightBreathingWidgetState
                     children: [
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -175,9 +173,9 @@ class _FourseveneightBreathingWidgetState
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#CalmingBreathPractice',
@@ -195,7 +193,7 @@ class _FourseveneightBreathingWidgetState
                       ),
                       Padding(
                         padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
+                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 8.0),
                         child: Container(
                           height: 32.0,
                           decoration: BoxDecoration(
@@ -206,9 +204,9 @@ class _FourseveneightBreathingWidgetState
                             ),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Padding(
-                              padding: EdgeInsetsDirectional.fromSTEB(
+                              padding: const EdgeInsetsDirectional.fromSTEB(
                                   8.0, 0.0, 8.0, 0.0),
                               child: Text(
                                 '#BreathworkForWellness',
@@ -224,22 +222,22 @@ class _FourseveneightBreathingWidgetState
                         ),
                       ),
                     ]
-                        .divide(SizedBox(width: 8.0))
-                        .addToStart(SizedBox(width: 16.0))
-                        .addToEnd(SizedBox(width: 16.0)),
+                        .divide(const SizedBox(width: 8.0))
+                        .addToStart(const SizedBox(width: 16.0))
+                        .addToEnd(const SizedBox(width: 16.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: 500.0,
                     height: 550.0,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF14181B),
                       shape: BoxShape.rectangle,
                     ),
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: const AlignmentDirectional(0.0, -1.0),
                       child: MarkdownBody(
                         data:
                             '''The 4-7-8 breathing method, developed by Dr. Andrew Weil, is not merely a tool for relaxation - it's a strategic pause that can reshape your physiological and psychological responses. By consciously controlling the rhythm and duration of your breath, you tap into the inherent power of your autonomic nervous system.
@@ -260,7 +258,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: Text(
                     'Set the timer',
                     textAlign: TextAlign.center,
@@ -275,10 +273,10 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                   key: _model.formKey,
                   autovalidateMode: AutovalidateMode.disabled,
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: const AlignmentDirectional(0.0, 0.0),
                     child: Padding(
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 10.0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -339,7 +337,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: const AlignmentDirectional(0.0, 0.0),
                             child: Text(
                               ':',
                               style: FlutterFlowTheme.of(context)
@@ -417,7 +415,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: const AlignmentDirectional(0.0, 0.0),
                               child: TextFormField(
                                 controller: _model.secondsTextController,
                                 focusNode: _model.secondsFocusNode,
@@ -480,7 +478,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: const AlignmentDirectional(0.0, 0.0),
                   child: FFButtonWidget(
                     onPressed: () async {
                       context.pushNamed('RelaxandLetGo_FourSevenEight');
@@ -500,18 +498,18 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                     options: FFButtonOptions(
                       height: 40.0,
                       padding:
-                          EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(24.0, 0.0, 24.0, 0.0),
                       iconPadding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
+                          const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 0.0),
                       color: Colors.transparent,
                       textStyle:
                           FlutterFlowTheme.of(context).titleSmall.override(
                                 fontFamily: 'Jost',
-                                color: Color(0xFF3BE8B0),
+                                color: const Color(0xFF3BE8B0),
                                 letterSpacing: 0.0,
                               ),
                       elevation: 3.0,
-                      borderSide: BorderSide(
+                      borderSide: const BorderSide(
                         color: Color(0xFF3BE8B0),
                         width: 1.0,
                       ),
@@ -519,7 +517,7 @@ Zaccaro, A., Piarulli, A., Laurino, M., Garbella, E., Menicucci, D., Neri, B., &
                     ),
                   ),
                 ),
-              ].divide(SizedBox(height: 12.0)),
+              ].divide(const SizedBox(height: 12.0)),
             ),
           ),
         ),
