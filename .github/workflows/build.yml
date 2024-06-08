@@ -40,8 +40,8 @@ jobs:
      - name: Get dependencies
        run: flutter pub get
      # Build apks
-     - name: Build apks
-       run: flutter build apk --split-per-abi
+     # - name: Build apk
+     #  run: flutter build apk
        
      - name: Sign App Bundle
        uses: r0adkll/sign-android-release@v1   
