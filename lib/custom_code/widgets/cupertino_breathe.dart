@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wakelock_plus/wakelock_plus.dart';
-import 'package:flutter_web_plugins/flutter_web_plugins.dart';
 
 class CupertinoBreathe extends StatefulWidget {
   const CupertinoBreathe({
@@ -138,11 +137,11 @@ class _CupertinoBreatheState extends State<CupertinoBreathe>
   }
 
   void enableWakeLock() async {
-    await Wakelock.enable();
+    await WakelockPlus.enable();
   }
 
   void disableWakeLock() async {
-    await Wakelock.disable();
+    await WakelockPlus.disable();
   }
 
   @override

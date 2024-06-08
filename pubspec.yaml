@@ -81,6 +81,7 @@ dev_dependencies:
   flutter_lints: ^4.0.0
   image: ^4.2.0
   lints: ^4.0.0
+  change_app_package_name: ^1.2.0
 
   flutter_test:
     sdk: flutter
@@ -109,7 +110,21 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/fonts/
-    - assets/images/
+    - assets/images/app_launcher_icon.png
+    - assets/images/lotus-svgrepo-com_(1).svg
+    - assets/images/pexels-barbara-olsen-7869588.jpg
+    - assets/images/pexels-corey-dupree-864195-10038998.jpg
+    - assets/images/pexels-freestockpro-321576.jpg
+    - assets/images/pexels-gabby-k-5302897.jpg
+    - assets/images/pexels-gustavo-fring-4148923.jpg
+    - assets/images/pexels-ingridsantanaph-2100027.jpg
+    - assets/images/pexels-lazarevkirill-9986905.jpg
+    - assets/images/pexels-miaversa-53441205-11409226.jpg
+    - assets/images/pexels-mikhail-nilov-6932075.jpg
+    - assets/images/pexels-olly-3782826.jpg
+    - assets/images/pexels-spencer-selover-142259-775417.jpg
+    - assets/images/pexels-vlada-karpovich-8940499.jpg
+    - assets/images/processingly-2pUP1Ts1bmo-unsplash.jpg
     - assets/videos/
     - assets/audios/
     - assets/lottie_animations/
