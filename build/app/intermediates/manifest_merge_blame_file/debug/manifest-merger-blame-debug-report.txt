@@ -1,0 +1,161 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.jlca.modulate"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.WAKE_LOCK" />
+14-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:4:5-68
+14-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:4:22-65
+15    <uses-permission android:name="android.permission.INTERNET" />
+15-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:5:5-67
+15-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:5:22-64
+16
+17    <permission
+17-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+18        android:name="com.jlca.modulate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+18-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+19        android:protectionLevel="signature" />
+19-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+20
+21    <uses-permission android:name="com.jlca.modulate.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+21-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+21-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+22
+23    <application
+23-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:9:5-63:19
+24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+24-->[androidx.core:core:1.10.1] C:\Users\specimen\.gradle\caches\transforms-3\69d2eb7566b0b34768d6c7197b933957\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+25        android:debuggable="true"
+26        android:icon="@mipmap/ic_launcher"
+26-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:12:9-43
+27        android:label="Modulate"
+27-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:10:9-33
+28        android:requestLegacyExternalStorage="true" >
+28-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:13:9-52
+29        <activity
+29-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:15:9-53:20
+30            android:name="com.jlca.modulate.MainActivity"
+30-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:16:13-41
+31            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+31-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:20:13-163
+32            android:exported="true"
+32-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:17:13-36
+33            android:hardwareAccelerated="true"
+33-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:21:13-47
+34            android:launchMode="singleTop"
+34-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:18:13-43
+35            android:theme="@style/LaunchTheme"
+35-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:19:13-47
+36            android:windowSoftInputMode="adjustResize" >
+36-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:22:13-55
+37
+38            <!--
+39                 Specifies an Android theme to apply to this Activity as soon as
+40                 the Android process has started. This theme is visible to the user
+41                 while the Flutter UI initializes. After that, this theme continues
+42                 to determine the Window background behind the Flutter UI.
+43            -->
+44            <meta-data
+44-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:27:13-30:17
+45                android:name="io.flutter.embedding.android.NormalTheme"
+45-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:28:15-70
+46                android:resource="@style/NormalTheme" />
+46-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:29:15-52
+47            <!--
+48                 Displays an Android View that continues showing the launch screen
+49                 Drawable until Flutter paints its first frame, then this splash
+50                 screen fades out. A splash screen is useful to avoid any visual
+51                 gap between the end of Android's launch screen and the painting of
+52                 Flutter's first frame.
+53            -->
+54            <meta-data
+54-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:36:13-39:17
+55                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+55-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:37:15-79
+56                android:resource="@drawable/launch_background" />
+56-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:38:15-61
+57
+58            <intent-filter>
+58-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:40:13-43:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:41:17-68
+59-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:41:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:17-76
+61-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:42:27-74
+62            </intent-filter>
+63            <!-- Deep linking -->
+64            <meta-data
+64-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:13-90
+65                android:name="flutter_deeplinking_enabled"
+65-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:24-66
+66                android:value="true" />
+66-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:45:67-87
+67
+68            <intent-filter android:autoVerify="true" >
+68-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:13-51:29
+68-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:46:28-53
+69                <action android:name="android.intent.action.VIEW" />
+69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:17-69
+69-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:47:25-66
+70
+71                <category android:name="android.intent.category.DEFAULT" />
+71-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:17-76
+71-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:48:27-73
+72                <category android:name="android.intent.category.BROWSABLE" />
+72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:17-78
+72-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:49:27-75
+73
+74                <data
+74-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:17-79
+75                    android:host="modulate.com"
+75-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:49-76
+76                    android:scheme="modulate" />
+76-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:50:23-48
+77            </intent-filter>
+78        </activity>
+79
+80        <!--
+81             Don't delete the meta-data below.
+82             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+83        -->
+84        <meta-data
+84-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:57:9-59:33
+85            android:name="flutterEmbedding"
+85-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:58:13-44
+86            android:value="2" />
+86-->C:\Users\specimen\Documents\GitHub\Modulate1\android\app\src\main\AndroidManifest.xml:59:13-30
+87
+88        <activity
+88-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+89            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+89-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+90            android:exported="false"
+90-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+91            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+91-->[:url_launcher_android] C:\Users\specimen\Documents\GitHub\Modulate1\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+92
+93        <uses-library
+93-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+94            android:name="androidx.window.extensions"
+94-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+95            android:required="false" />
+95-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+96        <uses-library
+96-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+97            android:name="androidx.window.sidecar"
+97-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+98            android:required="false" />
+98-->[androidx.window:window:1.0.0-beta04] C:\Users\specimen\.gradle\caches\transforms-3\f55ed073faea651a9045c431b855a2d2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+99    </application>
+100
+101</manifest>
