@@ -156,7 +156,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   child: Align(
                     alignment: const AlignmentDirectional(0.0, 2.5),
                     child: Text(
-                      'Made with <3 by Jahnsen Agajona',
+                      'Made with <3 by Jahnsen',
                       textAlign: TextAlign.center,
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Jost',
