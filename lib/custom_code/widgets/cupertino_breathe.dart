@@ -184,7 +184,7 @@ class _BreathePainter extends CustomPainter {
         super(repaint: Listenable.merge([]));
 
   final double animationValue;
-  final int count = 0;
+  final int count = 20;
   final Paint circlePaint;
 
   @override

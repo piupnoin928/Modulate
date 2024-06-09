@@ -64,11 +64,7 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig signingConfigs.release
 
-            // Custom task to build release app bundle
-            task buildReleaseAppBundle(type: Exec) {
-                description = 'Build release app bundle'
-                commandLine 'flutter', 'build', 'appbundle'
-            }
+            
         }
     }
 }
