@@ -18,7 +18,7 @@ Simple guided breathing app built with Flutter on the FlutterFlow platform.
 
 <div align="center">
 
-  <img src="metadata/images/screenshots/app-firstscreen.png" width="20%" alt=""/>
+  <img src="metadata/images/screenshots/app-titlescreen.png" width="20%" alt=""/>
 
   <img src="metadata/images/screenshots/app-secondscreen.png" width="20%" alt=""/>
 
