@@ -5,9 +5,7 @@
 <br></br>
 
 [![made-with-flutter](https://img.shields.io/badge/Made%20with-Flutter-4361ee.svg?style=for-the-badge&labelColor=1c2427&color=3be8b0)](https://flutter.dev/)
-
 ![GitHub License](https://img.shields.io/github/license/piupnoin928/Modulate?style=for-the-badge&labelColor=1c2427&color=3be8b0)
-
 [![GitHub Release](https://img.shields.io/github/v/release/piupnoin928/Modulate?style=for-the-badge&labelColor=1c2427&color=3be8b0)](https://github.com/piupnoin928/Modulate/releases/)
 
 # Modulate
