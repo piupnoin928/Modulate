@@ -63,7 +63,7 @@ Simple guided breathing app built with Flutter on the FlutterFlow platform.
 - Git Clone The Repo
 
 ```
-git clone https://github.com/dstark5/Openlib.git
+git clone https://github.com/piupnoin928/Modulate.git
 ```
 
 - Run the app with Android Studio or VS Code. Or the command line:
