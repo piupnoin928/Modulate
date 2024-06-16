@@ -911,7 +911,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                         children: [
                           Padding(
                             padding: const EdgeInsetsDirectional.fromSTEB(
-                                42.0, 0.0, 0.0, 0.0),
+                                42.0, 0.0, 0.0, 10.0),
                             child: Text(
                               'Time in seconds',
                               style: FlutterFlowTheme.of(context)
@@ -932,7 +932,7 @@ class _CustomizationWidgetState extends State<CustomizationWidget> {
                         padding: const EdgeInsetsDirectional.fromSTEB(
                             42.0, 0.0, 0.0, 10.0),
                         child: Text(
-                          'Session Duration',
+                          'Session duration',
                           textAlign: TextAlign.start,
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(

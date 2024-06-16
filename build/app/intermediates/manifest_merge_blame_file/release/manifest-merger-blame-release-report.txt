@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.jlca.modulate"
 4    android:versionCode="4001"
-5    android:versionName="1.0.0" >
+5    android:versionName="1.5.0" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
