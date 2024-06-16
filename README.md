@@ -77,7 +77,7 @@ flutter run
 ```
 flutter build
 ```
-- The Build Will Be In './build/app/outputs/flutter-apk/app-release.apk'
+- The build will be available at: './build/app/outputs/flutter-apk/app-release.apk'
 
 ---
 
