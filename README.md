@@ -66,7 +66,7 @@ Simple guided breathing app built with Flutter on the FlutterFlow platform.
 git clone https://github.com/piupnoin928/Modulate.git
 ```
 
-- Run the app with Android Studio, or VSCode, or using the commandline:
+- Run the app with Android Studio, or VSCode, or using the command line:
 
 ```
 flutter pub get
