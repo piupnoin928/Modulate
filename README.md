@@ -4,7 +4,11 @@
 
 <br></br>
 
-![GitHub Release](https://img.shields.io/github/v/release/piupnoin928/Modulate?style=for-the-badge&labelColor=1c2427&color=3be8b0)
+[![made-with-flutter](https://img.shields.io/badge/Made%20with-Flutter-4361ee.svg?style=for-the-badge&labelColor=1c2427&color=3be8b0)](https://flutter.dev/)
+
+![GitHub License](https://img.shields.io/github/license/piupnoin928/Modulate?style=for-the-badge&labelColor=1c2427&color=3be8b0)
+
+[![GitHub Release](https://img.shields.io/github/v/release/piupnoin928/Modulate?style=for-the-badge&labelColor=1c2427&color=3be8b0)](https://github.com/piupnoin928/Modulate/releases/)
 
 # Modulate
 
@@ -52,9 +56,28 @@ Simple guided breathing app built with Flutter on the FlutterFlow platform.
 
 ---
 
-## 💬 Contact Me
+## Building from Source
 
-- Email : jahn.sen110@gmail.com
+- If you don't have Flutter SDK installed, please visit official [Flutter](https://flutter.dev) site.
+
+- Git Clone The Repo
+
+```
+git clone https://github.com/dstark5/Openlib.git
+```
+
+- Run the app with Android Studio or VS Code. Or the command line:
+
+```
+flutter pub get
+flutter run
+```
+
+- To Build App Run:
+```
+flutter build
+```
+- The Build Will Be In './build/app/outputs/flutter-apk/app-release.apk'
 
 ---
 
