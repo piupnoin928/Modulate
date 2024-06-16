@@ -58,22 +58,22 @@ Simple guided breathing app built with Flutter on the FlutterFlow platform.
 
 ## Building from Source
 
-- If you don't have Flutter SDK installed, please visit official [Flutter](https://flutter.dev) site.
+- If you don't have the Flutter SDK installed, please visit the official [Flutter](https://flutter.dev) site.
 
-- Git Clone The Repo
+- Git clone the repo
 
 ```
 git clone https://github.com/piupnoin928/Modulate.git
 ```
 
-- Run the app with Android Studio or VS Code. Or the command line:
+- Run the app with Android Studio, or VSCode, or using the commandline:
 
 ```
 flutter pub get
 flutter run
 ```
 
-- To Build App Run:
+- To build the app, run:
 ```
 flutter build
 ```
